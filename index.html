@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Marek Musil – Finanční poradce | Brno</title>
+  <title>Finanční poradce Brno - osobně nebo online | Marek Musil</title>
   <meta name="description" content="Marek Musil – finanční poradce v Brně. Upřednostňuji placené poradenství – platíte za mou práci, ne za uzavřené produkty. Osobní schůzky v Brně, online konzultace po celé ČR." />
   <meta name="keywords" content="finanční poradce Brno, placené poradenství, finanční poradce online, Financero, Marek Musil, investice, hypotéky, pojištění, penze" />
   <meta name="author" content="Marek Musil" />
-  <meta property="og:title" content="Marek Musil – Finanční poradce | Brno" />
+  <meta property="og:title" content="Finanční poradce Brno - osobně nebo online | Marek Musil" />
   <meta property="og:description" content="Finanční poradce v Brně. Osobní schůzky i online konzultace po celé ČR. Platíte za mou práci, ne za uzavřené produkty." />
   <meta property="og:image" content="https://poradce-musil.cz/kancl.png" />
   <meta property="og:type" content="website" />
@@ -17,7 +17,7 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Marek Musil – Finanční poradce | Brno" />
+  <meta name="twitter:title" content="Finanční poradce Brno - osobně nebo online | Marek Musil" />
   <meta name="twitter:description" content="Finanční poradce v Brně. Osobní schůzky i online konzultace po celé ČR." />
   <meta name="twitter:image" content="https://poradce-musil.cz/kancl.png" />
 
@@ -44,53 +44,42 @@
       "addressCountry": "CZ"
     },
     "areaServed": [
-      {
-        "@type": "City",
-        "name": "Brno"
-      },
-      {
-        "@type": "Country",
-        "name": "Česká republika"
-      }
+      { "@type": "City", "name": "Brno" },
+      { "@type": "Country", "name": "Česká republika" }
     ],
     "serviceType": ["Finanční poradenství", "Investiční poradenství", "Hypoteční poradenství", "Pojištění", "Penzijní poradenství", "Realitní služby"],
     "founder": {
       "@type": "Person",
       "name": "Marek Musil",
       "jobTitle": "Finanční poradce",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Financero, s.r.o."
-      }
+      "worksFor": { "@type": "Organization", "name": "Financero, s.r.o." }
     },
-    "memberOf": {
-      "@type": "Organization",
-      "name": "Asociace finančních poradců ČR (AFP ČR)"
-    },
+    "memberOf": { "@type": "Organization", "name": "Asociace finančních poradců ČR (AFP ČR)" },
     "priceRange": "od 500 Kč"
   }
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
   <style>
     /* ===========================
        CSS Custom Properties
     =========================== */
     :root {
-      --bg-dark:      #1a1a2e;
-      --bg-section:   #16213e;
-      --bg-card:      #0f3460;
-      --accent:       #c9a84c;
-      --accent-hover: #e2c16a;
-      --accent-dim:   rgba(201,168,76,0.08);
-      --text-light:   #ffffff;
-      --text-muted:   #a0aec0;
-      --border:       #2d3748;
-      --radius:       14px;
-      --transition:   0.3s ease;
+      --bg: #ffffff;
+      --bg-soft: #f7f7f5;
+      --bg-dark: #0f0f0f;
+      --accent: #4a3aff;
+      --accent-hover: #3525e6;
+      --text: #1a1a1a;
+      --text-secondary: #6b6b6b;
+      --text-muted: #999999;
+      --border: #e8e8e8;
+      --border-hover: #d0d0d0;
+      --radius: 16px;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     /* ===========================
@@ -100,99 +89,17 @@
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Nunito', sans-serif;
-      background: var(--bg-dark);
-      color: var(--text-light);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.65;
       overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
     }
 
     img { display: block; max-width: 100%; }
     a { color: var(--accent); text-decoration: none; transition: color var(--transition); }
     a:hover { color: var(--accent-hover); }
-
-    /* ===========================
-       Decorative SVG Dividers
-    =========================== */
-    .divider {
-      display: block;
-      width: 100%;
-      height: auto;
-      line-height: 0;
-      margin: 0;
-      padding: 0;
-    }
-
-    .divider svg {
-      display: block;
-      width: 100%;
-      height: 60px;
-    }
-
-    .divider-flip svg {
-      transform: scaleY(-1);
-    }
-
-    /* ===========================
-       Decorative Accents
-    =========================== */
-    .deco-line {
-      width: 48px;
-      height: 3px;
-      background: linear-gradient(90deg, var(--accent), transparent);
-      border-radius: 2px;
-      margin-bottom: 1.25rem;
-    }
-
-    .deco-dot {
-      display: inline-block;
-      width: 6px;
-      height: 6px;
-      background: var(--accent);
-      border-radius: 50%;
-      margin: 0 0.5rem;
-      vertical-align: middle;
-      opacity: 0.6;
-    }
-
-    /* Subtle grid pattern overlay */
-    .pattern-overlay {
-      position: relative;
-    }
-
-    .pattern-overlay::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image:
-        radial-gradient(circle at 1px 1px, rgba(201,168,76,0.04) 1px, transparent 0);
-      background-size: 40px 40px;
-      pointer-events: none;
-    }
-
-    /* Glow accents */
-    .glow-tl::before {
-      content: '';
-      position: absolute;
-      top: -15%;
-      left: -10%;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .glow-br::after {
-      content: '';
-      position: absolute;
-      bottom: -15%;
-      right: -10%;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(15,52,96,0.3) 0%, transparent 70%);
-      pointer-events: none;
-      z-index: 0;
-    }
 
     /* ===========================
        Navigation
@@ -201,53 +108,52 @@
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 100;
-      background: rgba(26, 26, 46, 0.88);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(201,168,76,0.08);
-      padding: 0 2rem;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 3rem;
       height: 64px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      transition: background var(--transition);
     }
 
     .nav-logo {
-      font-weight: 800;
+      font-weight: 900;
       font-size: 1.1rem;
-      color: var(--text-light);
-      letter-spacing: 0.01em;
+      color: var(--text);
+      letter-spacing: -0.02em;
     }
-
-    .nav-logo span { color: var(--accent); }
 
     .nav-links {
       display: flex;
-      gap: 2rem;
+      gap: 2.5rem;
       list-style: none;
       align-items: center;
     }
 
     .nav-links a {
-      color: var(--text-muted);
+      color: var(--text-secondary);
       font-weight: 600;
-      font-size: 0.9rem;
-      letter-spacing: 0.02em;
+      font-size: 0.88rem;
       transition: color var(--transition);
     }
 
-    .nav-links a:hover { color: var(--accent); }
+    .nav-links a:hover { color: var(--text); }
 
     .nav-cta {
-      background: var(--accent);
-      color: var(--bg-dark) !important;
-      padding: 0.45rem 1.1rem;
-      border-radius: 8px;
+      background: var(--text) !important;
+      color: var(--bg) !important;
+      padding: 0.5rem 1.2rem;
+      border-radius: 100px;
       font-weight: 700 !important;
-      transition: background var(--transition) !important;
+      font-size: 0.85rem !important;
+      transition: opacity var(--transition) !important;
     }
 
-    .nav-cta:hover { background: var(--accent-hover) !important; color: var(--bg-dark) !important; }
+    .nav-cta:hover { opacity: 0.8; color: var(--bg) !important; }
 
     .nav-toggle {
       display: none;
@@ -261,9 +167,9 @@
 
     .nav-toggle span {
       display: block;
-      width: 24px;
+      width: 22px;
       height: 2px;
-      background: var(--text-light);
+      background: var(--text);
       border-radius: 2px;
       transition: all 0.3s;
     }
@@ -274,488 +180,304 @@
     #hero {
       min-height: 100vh;
       display: flex;
+      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      background:
-        linear-gradient(135deg, var(--bg-dark) 0%, #0f1b35 50%, #0a1628 100%);
-      padding: 100px 2rem 60px;
+      text-align: center;
+      padding: 120px 2rem 80px;
       position: relative;
       overflow: hidden;
+      background: var(--bg);
     }
 
-    /* Decorative corner lines */
-    #hero::before {
-      content: '';
-      position: absolute;
-      top: 80px;
-      right: 40px;
-      width: 200px;
-      height: 200px;
-      border-right: 1px solid rgba(201,168,76,0.1);
-      border-top: 1px solid rgba(201,168,76,0.1);
-      pointer-events: none;
-    }
-
-    #hero::after {
-      content: '';
-      position: absolute;
-      bottom: 40px;
-      left: 40px;
-      width: 120px;
-      height: 120px;
-      border-left: 1px solid rgba(201,168,76,0.08);
-      border-bottom: 1px solid rgba(201,168,76,0.08);
-      pointer-events: none;
-    }
-
-    .hero-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
-      width: 100%;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-text { animation: fadeInUp 0.8s ease both; }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: rgba(201,168,76,0.1);
-      border: 1px solid rgba(201,168,76,0.25);
-      color: var(--accent);
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      padding: 0.35rem 0.85rem;
-      border-radius: 100px;
+    .hero-subtitle-top {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      font-weight: 500;
       margin-bottom: 1.5rem;
+      animation: fadeInUp 0.6s ease both;
     }
 
-    .hero-badge::before { content: '✦'; font-size: 0.6rem; }
-
-    .hero-text h1 {
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      font-weight: 800;
-      line-height: 1.15;
-      margin-bottom: 1.25rem;
-      letter-spacing: -0.02em;
-    }
-
-    .hero-text h1 em {
-      font-style: normal;
+    .hero-name {
+      font-size: clamp(4rem, 12vw, 10rem);
+      font-weight: 900;
+      line-height: 0.9;
+      letter-spacing: -0.04em;
       color: var(--accent);
+      margin-bottom: 1.5rem;
+      animation: fadeInUp 0.6s ease 0.1s both;
     }
 
-    .hero-subtitle {
-      font-size: 1.05rem;
-      color: var(--text-muted);
+    .hero-typing-wrap {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      font-weight: 400;
       margin-bottom: 2.5rem;
-      max-width: 480px;
-      line-height: 1.75;
+      min-height: 1.8em;
+      animation: fadeInUp 0.6s ease 0.2s both;
+    }
+
+    .typing-cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1.15em;
+      background: var(--accent);
+      margin-left: 2px;
+      vertical-align: text-bottom;
+      animation: blink 1s step-end infinite;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
     }
 
     .hero-actions {
       display: flex;
       gap: 1rem;
+      justify-content: center;
       flex-wrap: wrap;
+      animation: fadeInUp 0.6s ease 0.3s both;
     }
 
+    .hero-scroll-hint {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      font-weight: 500;
+      animation: fadeInUp 0.6s ease 0.5s both;
+    }
+
+    .scroll-arrow {
+      width: 20px;
+      height: 20px;
+      border-right: 2px solid var(--text-muted);
+      border-bottom: 2px solid var(--text-muted);
+      transform: rotate(45deg);
+      animation: scrollBounce 2s ease infinite;
+    }
+
+    @keyframes scrollBounce {
+      0%, 100% { transform: rotate(45deg) translateY(0); }
+      50% { transform: rotate(45deg) translateY(6px); }
+    }
+
+    /* ===========================
+       Buttons
+    =========================== */
     .btn-primary {
-      background: var(--accent);
-      color: var(--bg-dark);
-      font-family: 'Nunito', sans-serif;
-      font-weight: 800;
+      background: var(--text);
+      color: var(--bg);
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
       font-size: 0.95rem;
-      padding: 0.85rem 1.8rem;
-      border-radius: 10px;
+      padding: 0.85rem 2rem;
+      border-radius: 100px;
       border: none;
       cursor: pointer;
-      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+      transition: opacity var(--transition), transform var(--transition);
       display: inline-block;
-      box-shadow: 0 4px 20px rgba(201,168,76,0.2);
     }
 
     .btn-primary:hover {
-      background: var(--accent-hover);
-      color: var(--bg-dark);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(201,168,76,0.3);
+      opacity: 0.85;
+      color: var(--bg);
+      transform: translateY(-1px);
     }
 
     .btn-outline {
       background: transparent;
-      color: var(--text-light);
-      font-family: 'Nunito', sans-serif;
-      font-weight: 700;
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
       font-size: 0.95rem;
-      padding: 0.85rem 1.8rem;
-      border-radius: 10px;
-      border: 1px solid var(--border);
+      padding: 0.85rem 2rem;
+      border-radius: 100px;
+      border: 1.5px solid var(--border);
       cursor: pointer;
-      transition: border-color var(--transition), color var(--transition), transform var(--transition);
+      transition: border-color var(--transition), transform var(--transition);
       display: inline-block;
     }
 
     .btn-outline:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-      transform: translateY(-2px);
-    }
-
-    .hero-stats {
-      display: flex;
-      gap: 2.5rem;
-      margin-top: 3rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border);
-    }
-
-    .hero-stat {
-      position: relative;
-      padding-left: 1rem;
-    }
-
-    .hero-stat::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 4px;
-      bottom: 4px;
-      width: 2px;
-      background: var(--accent);
-      border-radius: 1px;
-    }
-
-    .hero-stat strong {
-      display: block;
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: var(--accent);
-    }
-
-    .hero-stat span {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      font-weight: 600;
-    }
-
-    /* Hero photo */
-    .hero-photo {
-      position: relative;
-      animation: fadeInRight 0.8s ease 0.2s both;
-    }
-
-    .hero-photo-frame {
-      position: relative;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow:
-        0 40px 80px rgba(0,0,0,0.4),
-        0 0 0 1px rgba(201,168,76,0.1);
-    }
-
-    .hero-photo-frame img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    /* Gradient overlay on photo bottom */
-    .hero-photo-frame::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 120px;
-      background: linear-gradient(to top, rgba(26,26,46,0.5), transparent);
-      pointer-events: none;
-    }
-
-    .hero-photo-badge {
-      position: absolute;
-      bottom: 1.5rem;
-      left: 1.5rem;
-      background: rgba(26, 26, 46, 0.85);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(201,168,76,0.15);
-      border-radius: 12px;
-      padding: 0.7rem 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.7rem;
-      z-index: 2;
-    }
-
-    .hero-photo-badge .icon {
-      width: 36px;
-      height: 36px;
-      background: rgba(201,168,76,0.15);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.1rem;
-    }
-
-    .hero-photo-badge .badge-text strong {
-      display: block;
-      font-size: 0.82rem;
-      font-weight: 700;
-    }
-
-    .hero-photo-badge .badge-text span {
-      font-size: 0.7rem;
-      color: var(--text-muted);
-    }
-
-    /* Decorative ring */
-    .hero-photo::before {
-      content: '';
-      position: absolute;
-      top: -10px;
-      right: -10px;
-      bottom: 10px;
-      left: 10px;
-      border: 1px solid rgba(201,168,76,0.12);
-      border-radius: 22px;
-      pointer-events: none;
-    }
-
-    /* ===========================
-       Value Banner
-    =========================== */
-    .fee-banner {
-      background: linear-gradient(180deg, #0a1628 0%, var(--bg-section) 100%);
-      padding: 2rem 2rem;
-      position: relative;
-    }
-
-    .fee-banner::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(201,168,76,0.2), transparent);
-    }
-
-    .fee-banner-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-    }
-
-    .fee-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--text-muted);
-      padding: 1rem 1.25rem;
-      background: rgba(255,255,255,0.02);
-      border: 1px solid rgba(201,168,76,0.08);
-      border-radius: var(--radius);
-      transition: border-color var(--transition);
-    }
-
-    .fee-item:hover {
-      border-color: rgba(201,168,76,0.2);
-    }
-
-    .fee-item .fee-icon {
-      font-size: 1.2rem;
-      flex-shrink: 0;
-      margin-top: 0.1rem;
-    }
-
-    .fee-item strong {
-      color: var(--text-light);
-      display: block;
-      margin-bottom: 0.15rem;
-      font-size: 0.88rem;
-    }
-
-    .fee-item span {
-      line-height: 1.45;
+      border-color: var(--text);
+      color: var(--text);
+      transform: translateY(-1px);
     }
 
     /* ===========================
        Section Commons
     =========================== */
     section {
-      padding: 70px 2rem;
+      padding: 100px 2rem;
       position: relative;
     }
 
     .container {
       max-width: 1100px;
       margin: 0 auto;
-      position: relative;
-      z-index: 1;
     }
 
     .section-label {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
+      display: inline-block;
       color: var(--accent);
-      font-size: 0.76rem;
+      font-size: 0.78rem;
       font-weight: 700;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       margin-bottom: 0.75rem;
     }
 
-    .section-label::before {
-      content: '';
-      display: inline-block;
-      width: 20px;
-      height: 2px;
-      background: var(--accent);
-      border-radius: 1px;
-    }
-
     .section-title {
-      font-size: clamp(1.6rem, 3vw, 2.3rem);
-      font-weight: 800;
-      line-height: 1.2;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900;
+      line-height: 1.1;
       margin-bottom: 1.25rem;
-      letter-spacing: -0.01em;
+      letter-spacing: -0.03em;
     }
 
     .section-desc {
-      color: var(--text-muted);
+      color: var(--text-secondary);
       max-width: 560px;
-      font-size: 1rem;
+      font-size: 1.05rem;
       line-height: 1.7;
+    }
+
+    /* Separator */
+    .separator {
+      max-width: 1100px;
+      margin: 0 auto;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ===========================
+       Photo + Values Strip
+    =========================== */
+    .intro-strip {
+      padding: 0 2rem;
+      background: var(--bg);
+    }
+
+    .intro-strip-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .intro-photo {
+      aspect-ratio: 3 / 4;
+      overflow: hidden;
+    }
+
+    .intro-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .intro-values {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 3rem;
+      gap: 1.75rem;
+      background: var(--bg-soft);
+    }
+
+    .intro-values-title {
+      font-size: 1.4rem;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+
+    .value-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .value-item-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .value-item-text h4 {
+      font-size: 0.92rem;
+      font-weight: 800;
+      margin-bottom: 0.15rem;
+      letter-spacing: -0.01em;
+    }
+
+    .value-item-text p {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
     }
 
     /* ===========================
        About Section
     =========================== */
     #o-mne {
-      background: var(--bg-section);
-      overflow: hidden;
+      background: var(--bg);
     }
 
     .about-grid {
       display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 3rem;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 5rem;
       align-items: start;
     }
 
-    .about-left {
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
+    .about-right {
       position: sticky;
       top: 84px;
     }
 
-    .about-photo-single {
-      position: relative;
-      border-radius: var(--radius);
+    .about-photo {
+      border-radius: 20px;
       overflow: hidden;
-      box-shadow:
-        0 32px 64px rgba(0,0,0,0.4),
-        0 0 0 1px rgba(201,168,76,0.08);
+      margin-bottom: 1.5rem;
     }
 
-    .about-photo-single img {
+    .about-photo {
+      aspect-ratio: 4 / 5;
+    }
+
+    .about-photo img {
       width: 100%;
-      height: auto;
-      max-height: 520px;
+      height: 100%;
       object-fit: cover;
       object-position: center center;
       display: block;
     }
 
-    /* Photo accent corner */
-    .about-photo-single::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 80px;
-      height: 80px;
-      border-right: 3px solid var(--accent);
-      border-bottom: 3px solid var(--accent);
-      border-radius: 0 0 var(--radius) 0;
-      opacity: 0.4;
-      pointer-events: none;
-    }
-
-    .about-content { padding-top: 0.5rem; }
-    .about-content h2 { margin-bottom: 1.5rem; }
-
-    .about-content p {
-      color: var(--text-muted);
-      margin-bottom: 1rem;
-      font-size: 0.95rem;
-      line-height: 1.7;
-    }
-
-    .about-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin: 1.25rem 0;
-    }
-
-    .tag {
-      background: rgba(201,168,76,0.08);
-      border: 1px solid rgba(201,168,76,0.2);
-      color: var(--accent);
-      padding: 0.32rem 0.8rem;
-      border-radius: 100px;
-      font-size: 0.78rem;
-      font-weight: 700;
-      transition: background var(--transition);
-    }
-
-    .tag:hover {
-      background: rgba(201,168,76,0.15);
-    }
-
-    .about-highlight {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-      margin-top: 1.25rem;
-      padding: 1rem 1.25rem;
-      background: linear-gradient(135deg, var(--bg-card) 0%, rgba(15,52,96,0.6) 100%);
-      border-radius: var(--radius);
-      border: 1px solid rgba(201,168,76,0.12);
-    }
-
-    .about-highlight .hl-icon {
-      font-size: 1.4rem;
-      flex-shrink: 0;
-      margin-top: 0.1rem;
-    }
-
-    .about-highlight strong { display: block; font-size: 0.88rem; margin-bottom: 0.25rem; }
-    .about-highlight span { font-size: 0.8rem; color: var(--text-muted); line-height: 1.55; }
-
-    /* ===========================
-       Certifications
-    =========================== */
     .certs-strip {
-      margin-top: 1.75rem;
       padding: 1.25rem;
-      background: rgba(255,255,255,0.02);
+      background: var(--bg-soft);
       border-radius: var(--radius);
       border: 1px solid var(--border);
     }
@@ -767,131 +489,141 @@
       text-transform: uppercase;
       color: var(--text-muted);
       margin-bottom: 0.75rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .certs-strip-label::before {
-      content: '🎓';
-      font-size: 0.9rem;
     }
 
     .certs-list {
       display: flex;
       flex-direction: column;
-      gap: 0.3rem;
+      gap: 0.25rem;
     }
 
     .cert-item {
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       line-height: 1.5;
-      padding: 0.3rem 0;
+      padding: 0.25rem 0;
       display: flex;
       align-items: baseline;
       gap: 0.4rem;
     }
 
     .cert-item::before {
-      content: '→';
+      content: '—';
       color: var(--accent);
-      font-size: 0.7rem;
+      font-weight: 700;
       flex-shrink: 0;
     }
 
-    .cert-name {
-      color: var(--text-light);
-      font-weight: 700;
+    .cert-name { font-weight: 700; color: var(--text); }
+    .cert-desc { color: var(--text-secondary); }
+
+    .about-content h2 { margin-bottom: 1.5rem; }
+
+    .about-content p {
+      color: var(--text-secondary);
+      margin-bottom: 1.25rem;
+      font-size: 1rem;
+      line-height: 1.8;
     }
 
-    .cert-desc {
-      color: var(--text-muted);
-      font-weight: 400;
+    .about-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1.5rem 0;
     }
+
+    .tag {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.35rem 0.85rem;
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      transition: all var(--transition);
+    }
+
+    .tag:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .about-highlight {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      margin-top: 1.5rem;
+      padding: 1.25rem;
+      background: var(--bg-soft);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+    }
+
+    .about-highlight .hl-icon { font-size: 1.4rem; flex-shrink: 0; }
+    .about-highlight strong { display: block; font-size: 0.92rem; margin-bottom: 0.2rem; }
+    .about-highlight span { font-size: 0.84rem; color: var(--text-secondary); line-height: 1.55; }
 
     /* ===========================
        Team Section
     =========================== */
     #tym {
-      background:
-        linear-gradient(180deg, var(--bg-dark) 0%, #0f1b35 100%);
-      overflow: hidden;
+      background: var(--bg-soft);
     }
 
     .team-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1.25rem;
-      margin-top: 2.5rem;
+      margin-top: 3rem;
     }
 
     .team-card {
-      background: rgba(22,33,62,0.6);
+      background: var(--bg);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 1.25rem;
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .team-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, var(--accent), transparent);
-      opacity: 0;
-      transition: opacity var(--transition);
+      padding: 1.5rem;
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
     }
 
     .team-card:hover {
-      border-color: rgba(201,168,76,0.25);
       transform: translateY(-4px);
-      box-shadow: 0 16px 40px rgba(0,0,0,0.25);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+      border-color: var(--border-hover);
     }
 
-    .team-card:hover::before { opacity: 1; }
-
     .team-icon {
-      width: 48px;
-      height: 48px;
-      background: rgba(201,168,76,0.1);
-      border: 1px solid rgba(201,168,76,0.15);
+      width: 44px;
+      height: 44px;
+      background: var(--bg-soft);
       border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.4rem;
-      flex-shrink: 0;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
     }
 
-    .team-card-content h4 {
-      font-size: 1rem;
+    .team-card h4 {
+      font-size: 0.95rem;
       font-weight: 800;
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.4rem;
+      letter-spacing: -0.01em;
     }
 
-    .team-card-content p {
+    .team-card p {
       font-size: 0.84rem;
-      color: var(--text-muted);
-      line-height: 1.55;
+      color: var(--text-secondary);
+      line-height: 1.6;
     }
 
     /* ===========================
        Services / Pricing
     =========================== */
     #sluzby {
-      background: var(--bg-section);
-      overflow: hidden;
+      background: var(--bg);
     }
 
-    .services-header { margin-bottom: 2.5rem; }
+    .services-header { margin-bottom: 3rem; }
 
     .services-grid {
       display: grid;
@@ -900,70 +632,53 @@
     }
 
     .service-card {
-      background: linear-gradient(180deg, rgba(26,26,46,0.8) 0%, rgba(26,26,46,0.95) 100%);
+      background: var(--bg);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 1.5rem;
-      transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+      padding: 1.75rem;
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
       position: relative;
-      overflow: hidden;
-    }
-
-    .service-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--accent), transparent);
-      opacity: 0;
-      transition: opacity var(--transition);
     }
 
     .service-card:hover {
       transform: translateY(-4px);
-      border-color: rgba(201,168,76,0.3);
-      box-shadow: 0 24px 48px rgba(0,0,0,0.3);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+      border-color: var(--border-hover);
     }
 
-    .service-card:hover::before { opacity: 1; }
-
-    .service-icon {
-      font-size: 2rem;
-      margin-bottom: 1.25rem;
-    }
+    .service-icon { font-size: 1.8rem; margin-bottom: 1rem; }
 
     .service-card h3 {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       font-weight: 800;
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
     }
 
     .service-card p {
-      color: var(--text-muted);
+      color: var(--text-secondary);
       font-size: 0.88rem;
       margin-bottom: 1.25rem;
       line-height: 1.6;
     }
 
-    .service-items {
-      list-style: none;
-      margin-bottom: 1.75rem;
-    }
+    .service-items { list-style: none; margin-bottom: 1.5rem; }
 
     .service-items li {
-      font-size: 0.82rem;
-      color: var(--text-muted);
+      font-size: 0.84rem;
+      color: var(--text-secondary);
       padding: 0.3rem 0;
       padding-left: 1.2rem;
       position: relative;
     }
 
     .service-items li::before {
-      content: '→';
+      content: '—';
       position: absolute;
       left: 0;
       color: var(--accent);
-      font-size: 0.75rem;
+      font-weight: 700;
+      font-size: 0.7rem;
     }
 
     .service-price {
@@ -976,34 +691,30 @@
     }
 
     .price-amount {
-      font-size: 1.3rem;
-      font-weight: 800;
-      color: var(--accent);
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: var(--text);
+      letter-spacing: -0.02em;
     }
 
-    .price-note {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-    }
+    .price-note { font-size: 0.78rem; color: var(--text-muted); }
 
-    /* Featured card */
+    /* Featured */
     .service-card.featured {
-      background: linear-gradient(135deg, var(--bg-card) 0%, rgba(15,52,96,0.7) 100%);
-      border-color: rgba(201,168,76,0.3);
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px var(--accent);
     }
-
-    .service-card.featured::before { opacity: 1; }
 
     .featured-badge {
       position: absolute;
       top: 1rem; right: 1rem;
       background: var(--accent);
-      color: var(--bg-dark);
+      color: white;
       font-size: 0.68rem;
       font-weight: 800;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
-      padding: 0.2rem 0.6rem;
+      padding: 0.25rem 0.7rem;
       border-radius: 100px;
     }
 
@@ -1011,21 +722,19 @@
        Contact Section
     =========================== */
     #kontakt {
-      background:
-        linear-gradient(180deg, var(--bg-dark) 0%, #0f1b35 100%);
-      overflow: hidden;
+      background: var(--bg-soft);
     }
 
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1.4fr;
       gap: 4rem;
-      margin-top: 2.5rem;
+      margin-top: 3rem;
       align-items: start;
     }
 
     .contact-info h3 {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       font-weight: 800;
       margin-bottom: 1.5rem;
     }
@@ -1037,23 +746,22 @@
       align-items: center;
       gap: 1rem;
       padding: 1rem 1.25rem;
-      background: rgba(22,33,62,0.5);
+      background: var(--bg);
       border-radius: var(--radius);
       border: 1px solid var(--border);
       transition: border-color var(--transition), transform var(--transition);
     }
 
     .contact-item:hover {
-      border-color: rgba(201,168,76,0.25);
+      border-color: var(--border-hover);
       transform: translateX(4px);
     }
 
     .contact-item-icon {
       width: 42px;
       height: 42px;
-      background: rgba(201,168,76,0.1);
-      border: 1px solid rgba(201,168,76,0.12);
-      border-radius: 10px;
+      background: var(--bg-soft);
+      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1063,28 +771,27 @@
 
     .contact-item-text strong {
       display: block;
-      font-size: 0.76rem;
+      font-size: 0.72rem;
       color: var(--text-muted);
       text-transform: uppercase;
       letter-spacing: 0.05em;
       font-weight: 700;
-      margin-bottom: 0.15rem;
+      margin-bottom: 0.1rem;
     }
 
-    .contact-item-text span, .contact-item-text a {
+    .contact-item-text span,
+    .contact-item-text a {
       font-size: 0.92rem;
       font-weight: 600;
-      color: var(--text-light);
+      color: var(--text);
     }
 
     .contact-item-text a:hover { color: var(--accent); }
 
-    .contact-social {
-      margin-top: 2rem;
-    }
+    .contact-social { margin-top: 2rem; }
 
-    .contact-social p {
-      font-size: 0.76rem;
+    .contact-social > p {
+      font-size: 0.72rem;
       color: var(--text-muted);
       text-transform: uppercase;
       letter-spacing: 0.05em;
@@ -1098,25 +805,25 @@
       display: flex;
       align-items: center;
       gap: 0.6rem;
-      background: rgba(22,33,62,0.5);
+      background: var(--bg);
       border: 1px solid var(--border);
-      color: var(--text-muted) !important;
+      color: var(--text-secondary) !important;
       padding: 0.6rem 1rem;
-      border-radius: 8px;
-      font-size: 0.82rem;
-      font-weight: 700;
+      border-radius: 10px;
+      font-size: 0.84rem;
+      font-weight: 600;
       transition: all var(--transition);
     }
 
     .social-link:hover {
-      border-color: rgba(201,168,76,0.3);
+      border-color: var(--accent);
       color: var(--accent) !important;
       transform: translateX(4px);
     }
 
     /* Contact Form */
     .contact-form-wrap {
-      background: rgba(22,33,62,0.5);
+      background: var(--bg);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 2.25rem;
@@ -1129,8 +836,8 @@
     }
 
     .contact-form-wrap > p {
-      font-size: 0.85rem;
-      color: var(--text-muted);
+      font-size: 0.88rem;
+      color: var(--text-secondary);
       margin-bottom: 1.75rem;
     }
 
@@ -1149,11 +856,11 @@
     .form-group input,
     .form-group textarea,
     .form-group select {
-      background: rgba(26,26,46,0.6);
+      background: var(--bg-soft);
       border: 1px solid var(--border);
-      border-radius: 8px;
-      color: var(--text-light);
-      font-family: 'Nunito', sans-serif;
+      border-radius: 10px;
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
       font-size: 0.92rem;
       padding: 0.8rem 1rem;
       outline: none;
@@ -1165,11 +872,10 @@
     .form-group textarea:focus,
     .form-group select:focus {
       border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(201,168,76,0.08);
+      box-shadow: 0 0 0 3px rgba(74, 58, 255, 0.08);
     }
 
     .form-group textarea { resize: vertical; min-height: 110px; }
-    .form-group select option { background: var(--bg-dark); }
 
     .gdpr-check {
       display: flex;
@@ -1177,7 +883,7 @@
       gap: 0.75rem;
       margin: 1.25rem 0 1.5rem;
       font-size: 0.78rem;
-      color: var(--text-muted);
+      color: var(--text-secondary);
       line-height: 1.5;
     }
 
@@ -1195,23 +901,23 @@
     .form-msg {
       margin-top: 1rem;
       padding: 0.8rem 1rem;
-      border-radius: 8px;
+      border-radius: 10px;
       font-size: 0.88rem;
       font-weight: 600;
       display: none;
     }
 
     .form-msg.success {
-      background: rgba(72, 199, 142, 0.12);
-      border: 1px solid rgba(72, 199, 142, 0.3);
-      color: #48c78e;
+      background: rgba(34, 197, 94, 0.08);
+      border: 1px solid rgba(34, 197, 94, 0.25);
+      color: #16a34a;
       display: block;
     }
 
     .form-msg.error {
-      background: rgba(241, 70, 104, 0.12);
-      border: 1px solid rgba(241, 70, 104, 0.3);
-      color: #f14668;
+      background: rgba(239, 68, 68, 0.08);
+      border: 1px solid rgba(239, 68, 68, 0.25);
+      color: #dc2626;
       display: block;
     }
 
@@ -1219,7 +925,7 @@
        Footer
     =========================== */
     footer {
-      background: var(--bg-dark);
+      background: var(--bg);
       border-top: 1px solid var(--border);
       padding: 3rem 2rem;
       text-align: center;
@@ -1235,11 +941,10 @@
     }
 
     .footer-logo {
-      font-weight: 800;
+      font-weight: 900;
       font-size: 1.05rem;
+      letter-spacing: -0.02em;
     }
-
-    .footer-logo span { color: var(--accent); }
 
     footer p {
       color: var(--text-muted);
@@ -1255,8 +960,8 @@
     }
 
     .footer-links a {
-      color: var(--text-muted);
-      font-size: 0.78rem;
+      color: var(--text-secondary);
+      font-size: 0.8rem;
       font-weight: 600;
       transition: color var(--transition);
     }
@@ -1267,13 +972,8 @@
        Animations
     =========================== */
     @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(28px); }
+      from { opacity: 0; transform: translateY(24px); }
       to   { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeInRight {
-      from { opacity: 0; transform: translateX(28px); }
-      to   { opacity: 1; transform: translateX(0); }
     }
 
     .fade-in {
@@ -1287,52 +987,52 @@
       transform: translateY(0);
     }
 
-    /* Staggered children */
-    .fade-in-stagger > .fade-in:nth-child(2) { transition-delay: 0.1s; }
-    .fade-in-stagger > .fade-in:nth-child(3) { transition-delay: 0.2s; }
-    .fade-in-stagger > .fade-in:nth-child(4) { transition-delay: 0.3s; }
-    .fade-in-stagger > .fade-in:nth-child(5) { transition-delay: 0.35s; }
-    .fade-in-stagger > .fade-in:nth-child(6) { transition-delay: 0.4s; }
+    .fade-in-stagger > .fade-in:nth-child(2) { transition-delay: 0.08s; }
+    .fade-in-stagger > .fade-in:nth-child(3) { transition-delay: 0.16s; }
+    .fade-in-stagger > .fade-in:nth-child(4) { transition-delay: 0.24s; }
+    .fade-in-stagger > .fade-in:nth-child(5) { transition-delay: 0.32s; }
+    .fade-in-stagger > .fade-in:nth-child(6) { transition-delay: 0.40s; }
+    .fade-in-stagger > .fade-in:nth-child(7) { transition-delay: 0.48s; }
 
     /* ===========================
        Responsive
     =========================== */
     @media (max-width: 900px) {
-      .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; text-align: center; }
-      .hero-actions { justify-content: center; }
-      .hero-stats { justify-content: center; }
-      .hero-subtitle { margin: 0 auto 2.5rem; }
-      .hero-photo { max-width: 400px; margin: 0 auto; }
-      .hero-stat { padding-left: 0.8rem; }
-      #hero::before, #hero::after { display: none; }
+      nav { padding: 0 1.5rem; }
+      .hero-name { font-size: clamp(3rem, 14vw, 6rem); }
 
       .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-      .about-photo-single img { max-height: 360px; }
+      .about-right { position: static; }
 
       .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
-
-      .fee-banner-inner { grid-template-columns: 1fr 1fr; }
-
+      .intro-strip-inner { grid-template-columns: 1fr; }
+      .intro-photo { aspect-ratio: 16 / 9; }
       .team-grid { grid-template-columns: 1fr 1fr; }
-
-      .about-left { position: static; }
     }
 
     @media (max-width: 768px) {
-      .nav-links { display: none; flex-direction: column; position: fixed; top: 64px; left: 0; right: 0; background: rgba(26,26,46,0.98); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); padding: 1.5rem 2rem; gap: 1.25rem; }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 64px; left: 0; right: 0;
+        background: rgba(255,255,255,0.98);
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--border);
+        padding: 1.5rem 2rem;
+        gap: 1.25rem;
+      }
       .nav-links.open { display: flex; }
       .nav-toggle { display: flex; }
       .form-row { grid-template-columns: 1fr; }
-      section { padding: 50px 1.25rem; }
+      section { padding: 60px 1.25rem; }
       .services-grid { grid-template-columns: 1fr; }
       .team-grid { grid-template-columns: 1fr; }
-      .fee-banner-inner { grid-template-columns: 1fr; }
-
-      .divider svg { height: 36px; }
+      .intro-strip-inner { border-radius: 16px; }
     }
 
     @media (max-width: 480px) {
-      .hero-stats { flex-direction: column; gap: 1rem; }
+      .hero-name { font-size: clamp(2.5rem, 16vw, 4rem); }
     }
   </style>
 </head>
@@ -1342,7 +1042,7 @@
        Navigation
   ===================== -->
   <nav>
-    <div class="nav-logo">Marek <span>Musil</span></div>
+    <div class="nav-logo">Marek Musil</div>
     <ul class="nav-links" id="navLinks">
       <li><a href="#o-mne">O mně</a></li>
       <li><a href="#tym">Tým</a></li>
@@ -1359,132 +1059,74 @@
        Hero
   ===================== -->
   <section id="hero">
-    <div class="hero-inner">
-
-      <div class="hero-text">
-        <div class="hero-badge">Finanční poradce · Brno · osobně nebo online</div>
-        <h1>Platíte za radu,<br>ne za <em>uzavřené smlouvy</em></h1>
-        <p class="hero-subtitle">
-          Upřednostňuji model <strong>placeného poradenství</strong> – moje odměna
-          nezávisí na tom, jaký produkt vám doporučím. Žádný tlak, jen čistá
-          analýza vaší situace. Osobní schůzky v Brně, online konzultace
-          po celé ČR.
-        </p>
-        <div class="hero-actions">
-          <a href="#kontakt" class="btn-primary">Domluvit konzultaci</a>
-          <a href="#sluzby" class="btn-outline">Přehled ceníku</a>
-        </div>
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <strong>10+</strong>
-            <span>let praxe</span>
-          </div>
-          <div class="hero-stat">
-            <strong>Placené</strong>
-            <span>poradenství</span>
-          </div>
-          <div class="hero-stat">
-            <strong>Online</strong>
-            <span>i osobní schůzky</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-photo">
-        <div class="hero-photo-frame">
-          <img
-            src="kancl.png"
-            alt="Marek Musil – finanční poradce"
-            loading="eager"
-          />
-        </div>
-        <div class="hero-photo-badge">
-          <div class="icon">🎓</div>
-          <div class="badge-text">
-            <strong>Člen AFP ČR</strong>
-            <span>Asociace finančních poradců ČR</span>
-          </div>
-        </div>
-      </div>
-
+    <p class="hero-subtitle-top">Finanční poradce · Brno · osobně nebo online</p>
+    <h1 class="hero-name">MAREK<br>MUSIL</h1>
+    <div class="hero-typing-wrap">
+      <span id="typingText"></span><span class="typing-cursor"></span>
+    </div>
+    <div class="hero-actions">
+      <a href="#kontakt" class="btn-primary">Domluvit konzultaci</a>
+      <a href="#sluzby" class="btn-outline">Přehled ceníku</a>
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-arrow"></div>
     </div>
   </section>
 
   <!-- =====================
-       Value bar
+       Photo + Values
   ===================== -->
-  <div class="fee-banner">
-    <div class="fee-banner-inner">
-      <div class="fee-item">
-        <span class="fee-icon">✔️</span>
-        <span><strong>Jasná odměna</strong>Víte předem, co platíte</span>
+  <div class="intro-strip fade-in">
+    <div class="intro-strip-inner">
+      <div class="intro-photo">
+        <img
+          src="kancl.png"
+          alt="Marek Musil – finanční poradce v kanceláři"
+          loading="eager"
+        />
       </div>
-      <div class="fee-item">
-        <span class="fee-icon">✔️</span>
-        <span><strong>Bez tlaku na produkty</strong>Doporučím to, co vám sedí</span>
-      </div>
-      <div class="fee-item">
-        <span class="fee-icon">✔️</span>
-        <span><strong>Široký přesah</strong>Finance, právo, reality a další</span>
-      </div>
-      <div class="fee-item">
-        <span class="fee-icon">✔️</span>
-        <span><strong>Osobně i online</strong>Brno + celá ČR</span>
+      <div class="intro-values">
+        <h3 class="intro-values-title">Proč spolupracovat<br>se mnou?</h3>
+        <div class="value-item">
+          <div class="value-item-icon">✔</div>
+          <div class="value-item-text">
+            <h4>Jasná odměna</h4>
+            <p>Víte předem, co platíte</p>
+          </div>
+        </div>
+        <div class="value-item">
+          <div class="value-item-icon">✔</div>
+          <div class="value-item-text">
+            <h4>Bez tlaku na produkty</h4>
+            <p>Doporučím to, co vám sedí</p>
+          </div>
+        </div>
+        <div class="value-item">
+          <div class="value-item-icon">✔</div>
+          <div class="value-item-text">
+            <h4>Široký přesah</h4>
+            <p>Finance, právo, reality a další</p>
+          </div>
+        </div>
+        <div class="value-item">
+          <div class="value-item-icon">✔</div>
+          <div class="value-item-text">
+            <h4>Osobně i online</h4>
+            <p>Brno + celá ČR</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Divider: banner → about -->
-  <div class="divider">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" fill="none">
-      <path d="M0,0 L1440,0 L1440,30 Q1080,60 720,30 Q360,0 0,30 Z" fill="#16213e"/>
-    </svg>
-  </div>
+  <div class="separator"></div>
 
   <!-- =====================
        O mně
   ===================== -->
   <section id="o-mne">
     <div class="container">
-
       <div class="about-grid">
-
-        <div class="about-left fade-in">
-          <div class="about-photo-single">
-            <img src="balon.jpg" alt="Marek Musil – nadhled a přesah" />
-          </div>
-
-          <!-- Certifikace pod fotkou -->
-          <div class="certs-strip">
-            <div class="certs-strip-label">Certifikace a odborná způsobilost</div>
-            <div class="certs-list">
-              <div class="cert-item">
-                <span class="cert-name">EUCS</span>
-                <span class="cert-desc">– ochrana práv klientů na finančním trhu</span>
-              </div>
-              <div class="cert-item">
-                <span class="cert-name">Investiční poradce</span>
-                <span class="cert-desc">– poradenství v oblasti investic</span>
-              </div>
-              <div class="cert-item">
-                <span class="cert-name">PFP</span>
-                <span class="cert-desc">– osobní finanční plánování</span>
-              </div>
-              <div class="cert-item">
-                <span class="cert-name">Penze</span>
-                <span class="cert-desc">– důchodové spoření a penzijní produkty</span>
-              </div>
-              <div class="cert-item">
-                <span class="cert-name">Pojištění</span>
-                <span class="cert-desc">– životní i neživotní pojistné produkty</span>
-              </div>
-              <div class="cert-item">
-                <span class="cert-name">Úvěry</span>
-                <span class="cert-desc">– spotřebitelské a hypoteční úvěry</span>
-              </div>
-            </div>
-          </div>
-        </div>
 
         <div class="about-content fade-in">
           <div class="section-label">O mně</div>
@@ -1523,32 +1165,70 @@
             <div class="hl-icon">🏢</div>
             <div>
               <strong>Zakladatel Financero, s.r.o.</strong>
-              <span>Finančně poradenská firma a realitní kancelář. Člen Asociace finančních poradců ČR (AFP ČR).</span>
+              <span>Finančně poradenská firma a realitní kancelář.</span>
             </div>
           </div>
 
+          <div class="about-highlight">
+            <div class="hl-icon">🤝</div>
+            <div>
+              <strong>Člen AFP ČR</strong>
+              <span>Asociace finančních poradců ČR – odborná komunita poradců.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-right fade-in">
+          <div class="about-photo">
+            <img src="balon.jpg" alt="Marek Musil – nadhled a přesah" />
+          </div>
+
+          <div class="certs-strip">
+            <div class="certs-strip-label">Certifikace a odborná způsobilost</div>
+            <div class="certs-list">
+              <div class="cert-item">
+                <span class="cert-name">EUCS</span>
+                <span class="cert-desc">– ochrana práv klientů na finančním trhu</span>
+              </div>
+              <div class="cert-item">
+                <span class="cert-name">Investiční poradce</span>
+                <span class="cert-desc">– poradenství v oblasti investic</span>
+              </div>
+              <div class="cert-item">
+                <span class="cert-name">PFP</span>
+                <span class="cert-desc">– osobní finanční plánování</span>
+              </div>
+              <div class="cert-item">
+                <span class="cert-name">Penze</span>
+                <span class="cert-desc">– důchodové spoření a penzijní produkty</span>
+              </div>
+              <div class="cert-item">
+                <span class="cert-name">Pojištění</span>
+                <span class="cert-desc">– životní i neživotní pojistné produkty</span>
+              </div>
+              <div class="cert-item">
+                <span class="cert-name">Úvěry</span>
+                <span class="cert-desc">– spotřebitelské a hypoteční úvěry</span>
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- Divider: about → team -->
-  <div class="divider divider-flip">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" fill="none">
-      <path d="M0,60 L0,30 Q360,0 720,30 Q1080,60 1440,30 L1440,60 Z" fill="#16213e"/>
-    </svg>
-  </div>
+  <div class="separator"></div>
 
   <!-- =====================
        Tým odborníků
   ===================== -->
-  <section id="tym" class="pattern-overlay">
+  <section id="tym">
     <div class="container">
 
       <div class="fade-in">
         <div class="section-label">Tým odborníků</div>
-        <h2 class="section-title">Komplexní pokrytí díky specialistům</h2>
+        <h2 class="section-title">Komplexní pokrytí<br>díky specialistům</h2>
         <p class="section-desc">
           Na specifická témata mám za sebou tým prověřených odborníků.
           Vy komunikujete se mnou – já podle potřeby koordinuji.
@@ -1559,72 +1239,55 @@
 
         <div class="team-card fade-in">
           <div class="team-icon">🧭</div>
-          <div class="team-card-content">
-            <h4>Finanční a krizové poradenství</h4>
-            <p>Pomoc v obtížných finančních situacích, stabilizace rozpočtu, nastavení cesty k finanční rovnováze.</p>
-          </div>
+          <h4>Finanční a krizové poradenství</h4>
+          <p>Pomoc v obtížných finančních situacích, stabilizace rozpočtu, nastavení cesty k finanční rovnováze.</p>
         </div>
 
         <div class="team-card fade-in">
           <div class="team-icon">🏠</div>
-          <div class="team-card-content">
-            <h4>Hypotéky a úvěry</h4>
-            <p>Srovnání nabídek bank, zpracování žádosti, výběr financování pro bydlení i podnikání.</p>
-          </div>
+          <h4>Hypotéky a úvěry</h4>
+          <p>Srovnání nabídek bank, zpracování žádosti, výběr financování pro bydlení i podnikání.</p>
         </div>
 
         <div class="team-card fade-in">
           <div class="team-icon">📈</div>
-          <div class="team-card-content">
-            <h4>Investice</h4>
-            <p>Správa investičního portfolia, fondy, ETF, alternativní investice a pravidelné reporty.</p>
-          </div>
+          <h4>Investice</h4>
+          <p>Správa investičního portfolia, fondy, ETF, alternativní investice a pravidelné reporty.</p>
         </div>
 
         <div class="team-card fade-in">
           <div class="team-icon">🛡️</div>
-          <div class="team-card-content">
-            <h4>Pojištění</h4>
-            <p>Životní, majetkové i podnikatelské pojištění. Revize smluv a optimalizace krytí.</p>
-          </div>
+          <h4>Pojištění</h4>
+          <p>Životní, majetkové i podnikatelské pojištění. Revize smluv a optimalizace krytí.</p>
         </div>
 
         <div class="team-card fade-in">
           <div class="team-icon">⚖️</div>
-          <div class="team-card-content">
-            <h4>Právní služby</h4>
-            <p>Smlouvy, daně, dědictví a majetková práva v kontextu finančního plánování.</p>
-          </div>
+          <h4>Právní služby</h4>
+          <p>Smlouvy, daně, dědictví a majetková práva v kontextu finančního plánování.</p>
         </div>
 
         <div class="team-card fade-in">
           <div class="team-icon">🏢</div>
-          <div class="team-card-content">
-            <h4>Realitní služby</h4>
-            <p>Koupě, prodej i pronájem nemovitostí. Propojení realitní transakce s financováním.</p>
-          </div>
+          <h4>Realitní služby</h4>
+          <p>Koupě, prodej i pronájem nemovitostí. Propojení realitní transakce s financováním.</p>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- Divider: team → pricing -->
-  <div class="divider">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" fill="none">
-      <path d="M0,0 L1440,0 L1440,30 Q1080,60 720,30 Q360,0 0,30 Z" fill="#16213e"/>
-    </svg>
-  </div>
+  <div class="separator"></div>
 
   <!-- =====================
        Ceník
   ===================== -->
-  <section id="sluzby" class="glow-br">
+  <section id="sluzby">
     <div class="container">
 
       <div class="services-header fade-in">
         <div class="section-label">Ceník služeb</div>
-        <h2 class="section-title">Jasná odměna, žádné skryté poplatky</h2>
+        <h2 class="section-title">Jasná odměna,<br>žádné skryté poplatky</h2>
         <p class="section-desc">
           Ceny jsou orientační – konkrétní rozsah a odměnu vždy domluvíme
           ještě před začátkem spolupráce.
@@ -1633,25 +1296,23 @@
 
       <div class="services-grid fade-in-stagger">
 
-        <!-- Tvorba finančního plánu -->
         <div class="service-card featured fade-in">
           <span class="featured-badge">Stěžejní služba</span>
           <div class="service-icon">📋</div>
-          <h3>Tvorba finančního plánu</h3>
+          <h3>Nastavení rodinného rozpočtu</h3>
           <p>Komplexní zmapování vaší situace, společné stanovení cílů a konkrétní strategie, jak jich dosáhnout.</p>
           <ul class="service-items">
             <li>Stanovení finančních cílů</li>
             <li>Zhodnocení současné situace</li>
-            <li>Návrh realizace finančních cílů</li>
+            <li>Dlouhodobá spolupráce</li>
             <li>Vzdělávání v oblasti finanční gramotnosti</li>
           </ul>
           <div class="service-price">
-            <span class="price-amount">4 000 – 15 000 Kč</span>
-            <span class="price-note">dle rozsahu</span>
+            <span class="price-amount">900 Kč</span>
+            <span class="price-note">/ měsíčně</span>
           </div>
         </div>
 
-        <!-- Tvorba finančního portfolia -->
         <div class="service-card fade-in">
           <div class="service-icon">📈</div>
           <h3>Tvorba finančního portfolia</h3>
@@ -1668,7 +1329,6 @@
           </div>
         </div>
 
-        <!-- Servis úvěrových produktů -->
         <div class="service-card fade-in">
           <div class="service-icon">🏠</div>
           <h3>Servis úvěrových produktů</h3>
@@ -1685,7 +1345,6 @@
           </div>
         </div>
 
-        <!-- Produktové srovnání -->
         <div class="service-card fade-in">
           <div class="service-icon">🔍</div>
           <h3>Produktové srovnání</h3>
@@ -1702,7 +1361,6 @@
           </div>
         </div>
 
-        <!-- Obecná konzultace -->
         <div class="service-card fade-in">
           <div class="service-icon">💬</div>
           <h3>Obecná konzultace</h3>
@@ -1719,7 +1377,6 @@
           </div>
         </div>
 
-        <!-- Realitní služby -->
         <div class="service-card fade-in">
           <div class="service-icon">🏢</div>
           <h3>Realitní služby</h3>
@@ -1740,17 +1397,10 @@
     </div>
   </section>
 
-  <!-- Divider: pricing → contact -->
-  <div class="divider divider-flip">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" fill="none">
-      <path d="M0,60 L0,30 Q360,0 720,30 Q1080,60 1440,30 L1440,60 Z" fill="#16213e"/>
-    </svg>
-  </div>
-
   <!-- =====================
        Kontakt
   ===================== -->
-  <section id="kontakt" class="glow-tl">
+  <section id="kontakt">
     <div class="container">
 
       <div class="fade-in">
@@ -1761,11 +1411,9 @@
 
       <div class="contact-grid">
 
-        <!-- Kontaktní údaje -->
         <div class="contact-info fade-in">
           <h3>Spojte se se mnou</h3>
           <div class="contact-items">
-
             <div class="contact-item">
               <div class="contact-item-icon">📞</div>
               <div class="contact-item-text">
@@ -1773,7 +1421,6 @@
                 <a href="tel:+420732187153">+420 732 187 153</a>
               </div>
             </div>
-
             <div class="contact-item">
               <div class="contact-item-icon">✉️</div>
               <div class="contact-item-text">
@@ -1781,7 +1428,6 @@
                 <a href="mailto:marek.musil@financero.cz">marek.musil@financero.cz</a>
               </div>
             </div>
-
             <div class="contact-item">
               <div class="contact-item-icon">📍</div>
               <div class="contact-item-text">
@@ -1789,7 +1435,6 @@
                 <span>Brno</span>
               </div>
             </div>
-
             <div class="contact-item">
               <div class="contact-item-icon">💻</div>
               <div class="contact-item-text">
@@ -1797,7 +1442,6 @@
                 <span>Po celé ČR</span>
               </div>
             </div>
-
           </div>
 
           <div class="contact-social">
@@ -1816,7 +1460,6 @@
           </div>
         </div>
 
-        <!-- Kontaktní formulář -->
         <div class="contact-form-wrap fade-in">
           <h3>Napište mi</h3>
           <p>Popište svoji situaci a já vám navrhnu, jak vám mohu pomoct.</p>
@@ -1880,7 +1523,7 @@
   ===================== -->
   <footer>
     <div class="footer-inner">
-      <div class="footer-logo">Marek <span>Musil</span></div>
+      <div class="footer-logo">Marek Musil</div>
       <p>Finanční poradce · Financero, s.r.o. · IČO: 08982171</p>
       <div class="footer-links">
         <a href="https://financero.cz" target="_blank" rel="noopener">Financero.cz</a>
@@ -1907,7 +1550,52 @@
       a.addEventListener('click', () => links.classList.remove('open'));
     });
 
-    // --- Scroll fade-in (with stagger support) ---
+    // --- Typing effect ---
+    const phrases = [
+      'Platíte za radu, ne za uzavřené smlouvy.',
+      'Osobní schůzky v Brně, online po celé ČR.',
+      'Přes 10 let zkušeností v oboru.',
+      'Finanční plánování s nadhledem.',
+    ];
+    const typingEl = document.getElementById('typingText');
+    let phraseIdx = 0;
+    let charIdx = 0;
+    let deleting = false;
+    let pauseEnd = 0;
+
+    function typeStep() {
+      const now = Date.now();
+      if (now < pauseEnd) {
+        requestAnimationFrame(typeStep);
+        return;
+      }
+
+      const phrase = phrases[phraseIdx];
+
+      if (!deleting) {
+        charIdx++;
+        typingEl.textContent = phrase.slice(0, charIdx);
+        if (charIdx === phrase.length) {
+          deleting = true;
+          pauseEnd = now + 2200;
+        }
+      } else {
+        charIdx--;
+        typingEl.textContent = phrase.slice(0, charIdx);
+        if (charIdx === 0) {
+          deleting = false;
+          phraseIdx = (phraseIdx + 1) % phrases.length;
+          pauseEnd = now + 400;
+        }
+      }
+
+      const speed = deleting ? 30 : 55;
+      setTimeout(() => requestAnimationFrame(typeStep), speed);
+    }
+
+    requestAnimationFrame(typeStep);
+
+    // --- Scroll fade-in ---
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
@@ -1920,14 +1608,14 @@
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
     // --- Nav background on scroll ---
-    const nav = document.querySelector('nav');
+    const navEl = document.querySelector('nav');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 80) {
-        nav.style.background = 'rgba(26, 26, 46, 0.97)';
-        nav.style.borderBottomColor = 'rgba(201,168,76,0.12)';
+        navEl.style.background = 'rgba(255, 255, 255, 0.97)';
+        navEl.style.boxShadow = '0 1px 12px rgba(0,0,0,0.04)';
       } else {
-        nav.style.background = 'rgba(26, 26, 46, 0.88)';
-        nav.style.borderBottomColor = 'rgba(201,168,76,0.08)';
+        navEl.style.background = 'rgba(255, 255, 255, 0.92)';
+        navEl.style.boxShadow = 'none';
       }
     }, { passive: true });
 
