@@ -1,0 +1,17 @@
+# Systémové soubory
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+
+# Env soubory
+.env
+.env.local
+
+# Zdrojové/pracovní soubory (nepatří na web)
+Prompt.txt
+*.ods
+*.pdf

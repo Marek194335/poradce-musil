@@ -1,0 +1,1917 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marek Musil – Finanční poradce | Brno</title>
+  <meta name="description" content="Marek Musil – finanční poradce v Brně. Upřednostňuji placené poradenství – platíte za mou práci, ne za uzavřené produkty. Osobní schůzky v Brně, online konzultace po celé ČR." />
+  <meta name="keywords" content="finanční poradce Brno, placené poradenství, finanční poradce online, Financero, Marek Musil, investice, hypotéky, pojištění, penze" />
+  <meta name="author" content="Marek Musil" />
+  <meta property="og:title" content="Marek Musil – Finanční poradce | Brno" />
+  <meta property="og:description" content="Finanční poradce v Brně. Osobní schůzky i online konzultace po celé ČR. Platíte za mou práci, ne za uzavřené produkty." />
+  <meta property="og:image" content="kancl.png" />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ===========================
+       CSS Custom Properties
+    =========================== */
+    :root {
+      --bg-dark:      #1a1a2e;
+      --bg-section:   #16213e;
+      --bg-card:      #0f3460;
+      --accent:       #c9a84c;
+      --accent-hover: #e2c16a;
+      --accent-dim:   rgba(201,168,76,0.08);
+      --text-light:   #ffffff;
+      --text-muted:   #a0aec0;
+      --border:       #2d3748;
+      --radius:       14px;
+      --transition:   0.3s ease;
+    }
+
+    /* ===========================
+       Reset & Base
+    =========================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-light);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { color: var(--accent); text-decoration: none; transition: color var(--transition); }
+    a:hover { color: var(--accent-hover); }
+
+    /* ===========================
+       Decorative SVG Dividers
+    =========================== */
+    .divider {
+      display: block;
+      width: 100%;
+      height: auto;
+      line-height: 0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .divider svg {
+      display: block;
+      width: 100%;
+      height: 60px;
+    }
+
+    .divider-flip svg {
+      transform: scaleY(-1);
+    }
+
+    /* ===========================
+       Decorative Accents
+    =========================== */
+    .deco-line {
+      width: 48px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+      border-radius: 2px;
+      margin-bottom: 1.25rem;
+    }
+
+    .deco-dot {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      margin: 0 0.5rem;
+      vertical-align: middle;
+      opacity: 0.6;
+    }
+
+    /* Subtle grid pattern overlay */
+    .pattern-overlay {
+      position: relative;
+    }
+
+    .pattern-overlay::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 1px 1px, rgba(201,168,76,0.04) 1px, transparent 0);
+      background-size: 40px 40px;
+      pointer-events: none;
+    }
+
+    /* Glow accents */
+    .glow-tl::before {
+      content: '';
+      position: absolute;
+      top: -15%;
+      left: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .glow-br::after {
+      content: '';
+      position: absolute;
+      bottom: -15%;
+      right: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(15,52,96,0.3) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ===========================
+       Navigation
+    =========================== */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(26, 26, 46, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(201,168,76,0.08);
+      padding: 0 2rem;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--text-light);
+      letter-spacing: 0.01em;
+    }
+
+    .nav-logo span { color: var(--accent); }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.02em;
+      transition: color var(--transition);
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    .nav-cta {
+      background: var(--accent);
+      color: var(--bg-dark) !important;
+      padding: 0.45rem 1.1rem;
+      border-radius: 8px;
+      font-weight: 700 !important;
+      transition: background var(--transition) !important;
+    }
+
+    .nav-cta:hover { background: var(--accent-hover) !important; color: var(--bg-dark) !important; }
+
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text-light);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    /* ===========================
+       Hero Section
+    =========================== */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(135deg, var(--bg-dark) 0%, #0f1b35 50%, #0a1628 100%);
+      padding: 100px 2rem 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Decorative corner lines */
+    #hero::before {
+      content: '';
+      position: absolute;
+      top: 80px;
+      right: 40px;
+      width: 200px;
+      height: 200px;
+      border-right: 1px solid rgba(201,168,76,0.1);
+      border-top: 1px solid rgba(201,168,76,0.1);
+      pointer-events: none;
+    }
+
+    #hero::after {
+      content: '';
+      position: absolute;
+      bottom: 40px;
+      left: 40px;
+      width: 120px;
+      height: 120px;
+      border-left: 1px solid rgba(201,168,76,0.08);
+      border-bottom: 1px solid rgba(201,168,76,0.08);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-text { animation: fadeInUp 0.8s ease both; }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(201,168,76,0.1);
+      border: 1px solid rgba(201,168,76,0.25);
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.85rem;
+      border-radius: 100px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-badge::before { content: '✦'; font-size: 0.6rem; }
+
+    .hero-text h1 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-text h1 em {
+      font-style: normal;
+      color: var(--accent);
+    }
+
+    .hero-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+      max-width: 480px;
+      line-height: 1.75;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--bg-dark);
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 0.95rem;
+      padding: 0.85rem 1.8rem;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+      display: inline-block;
+      box-shadow: 0 4px 20px rgba(201,168,76,0.2);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      color: var(--bg-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(201,168,76,0.3);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text-light);
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 0.85rem 1.8rem;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      transition: border-color var(--transition), color var(--transition), transform var(--transition);
+      display: inline-block;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 2.5rem;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .hero-stat {
+      position: relative;
+      padding-left: 1rem;
+    }
+
+    .hero-stat::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 4px;
+      bottom: 4px;
+      width: 2px;
+      background: var(--accent);
+      border-radius: 1px;
+    }
+
+    .hero-stat strong {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    .hero-stat span {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    /* Hero photo */
+    .hero-photo {
+      position: relative;
+      animation: fadeInRight 0.8s ease 0.2s both;
+    }
+
+    .hero-photo-frame {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow:
+        0 40px 80px rgba(0,0,0,0.4),
+        0 0 0 1px rgba(201,168,76,0.1);
+    }
+
+    .hero-photo-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Gradient overlay on photo bottom */
+    .hero-photo-frame::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 120px;
+      background: linear-gradient(to top, rgba(26,26,46,0.5), transparent);
+      pointer-events: none;
+    }
+
+    .hero-photo-badge {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 1.5rem;
+      background: rgba(26, 26, 46, 0.85);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(201,168,76,0.15);
+      border-radius: 12px;
+      padding: 0.7rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      z-index: 2;
+    }
+
+    .hero-photo-badge .icon {
+      width: 36px;
+      height: 36px;
+      background: rgba(201,168,76,0.15);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+
+    .hero-photo-badge .badge-text strong {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .hero-photo-badge .badge-text span {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+
+    /* Decorative ring */
+    .hero-photo::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      bottom: 10px;
+      left: 10px;
+      border: 1px solid rgba(201,168,76,0.12);
+      border-radius: 22px;
+      pointer-events: none;
+    }
+
+    /* ===========================
+       Value Banner
+    =========================== */
+    .fee-banner {
+      background: linear-gradient(180deg, #0a1628 0%, var(--bg-section) 100%);
+      padding: 2rem 2rem;
+      position: relative;
+    }
+
+    .fee-banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(201,168,76,0.2), transparent);
+    }
+
+    .fee-banner-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    .fee-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      padding: 1rem 1.25rem;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(201,168,76,0.08);
+      border-radius: var(--radius);
+      transition: border-color var(--transition);
+    }
+
+    .fee-item:hover {
+      border-color: rgba(201,168,76,0.2);
+    }
+
+    .fee-item .fee-icon {
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .fee-item strong {
+      color: var(--text-light);
+      display: block;
+      margin-bottom: 0.15rem;
+      font-size: 0.88rem;
+    }
+
+    .fee-item span {
+      line-height: 1.45;
+    }
+
+    /* ===========================
+       Section Commons
+    =========================== */
+    section {
+      padding: 70px 2rem;
+      position: relative;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--accent);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-label::before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 1px;
+    }
+
+    .section-title {
+      font-size: clamp(1.6rem, 3vw, 2.3rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.01em;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      max-width: 560px;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    /* ===========================
+       About Section
+    =========================== */
+    #o-mne {
+      background: var(--bg-section);
+      overflow: hidden;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .about-left {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      position: sticky;
+      top: 84px;
+    }
+
+    .about-photo-single {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow:
+        0 32px 64px rgba(0,0,0,0.4),
+        0 0 0 1px rgba(201,168,76,0.08);
+    }
+
+    .about-photo-single img {
+      width: 100%;
+      height: auto;
+      max-height: 520px;
+      object-fit: cover;
+      object-position: center center;
+      display: block;
+    }
+
+    /* Photo accent corner */
+    .about-photo-single::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 80px;
+      height: 80px;
+      border-right: 3px solid var(--accent);
+      border-bottom: 3px solid var(--accent);
+      border-radius: 0 0 var(--radius) 0;
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
+    .about-content { padding-top: 0.5rem; }
+    .about-content h2 { margin-bottom: 1.5rem; }
+
+    .about-content p {
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .about-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1.25rem 0;
+    }
+
+    .tag {
+      background: rgba(201,168,76,0.08);
+      border: 1px solid rgba(201,168,76,0.2);
+      color: var(--accent);
+      padding: 0.32rem 0.8rem;
+      border-radius: 100px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      transition: background var(--transition);
+    }
+
+    .tag:hover {
+      background: rgba(201,168,76,0.15);
+    }
+
+    .about-highlight {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-top: 1.25rem;
+      padding: 1rem 1.25rem;
+      background: linear-gradient(135deg, var(--bg-card) 0%, rgba(15,52,96,0.6) 100%);
+      border-radius: var(--radius);
+      border: 1px solid rgba(201,168,76,0.12);
+    }
+
+    .about-highlight .hl-icon {
+      font-size: 1.4rem;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .about-highlight strong { display: block; font-size: 0.88rem; margin-bottom: 0.25rem; }
+    .about-highlight span { font-size: 0.8rem; color: var(--text-muted); line-height: 1.55; }
+
+    /* ===========================
+       Certifications
+    =========================== */
+    .certs-strip {
+      margin-top: 1.75rem;
+      padding: 1.25rem;
+      background: rgba(255,255,255,0.02);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+    }
+
+    .certs-strip-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .certs-strip-label::before {
+      content: '🎓';
+      font-size: 0.9rem;
+    }
+
+    .certs-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .cert-item {
+      font-size: 0.78rem;
+      line-height: 1.5;
+      padding: 0.3rem 0;
+      display: flex;
+      align-items: baseline;
+      gap: 0.4rem;
+    }
+
+    .cert-item::before {
+      content: '→';
+      color: var(--accent);
+      font-size: 0.7rem;
+      flex-shrink: 0;
+    }
+
+    .cert-name {
+      color: var(--text-light);
+      font-weight: 700;
+    }
+
+    .cert-desc {
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    /* ===========================
+       Team Section
+    =========================== */
+    #tym {
+      background:
+        linear-gradient(180deg, var(--bg-dark) 0%, #0f1b35 100%);
+      overflow: hidden;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin-top: 2.5rem;
+    }
+
+    .team-card {
+      background: rgba(22,33,62,0.6);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .team-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+
+    .team-card:hover {
+      border-color: rgba(201,168,76,0.25);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.25);
+    }
+
+    .team-card:hover::before { opacity: 1; }
+
+    .team-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(201,168,76,0.1);
+      border: 1px solid rgba(201,168,76,0.15);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+
+    .team-card-content h4 {
+      font-size: 1rem;
+      font-weight: 800;
+      margin-bottom: 0.35rem;
+    }
+
+    .team-card-content p {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* ===========================
+       Services / Pricing
+    =========================== */
+    #sluzby {
+      background: var(--bg-section);
+      overflow: hidden;
+    }
+
+    .services-header { margin-bottom: 2.5rem; }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .service-card {
+      background: linear-gradient(180deg, rgba(26,26,46,0.8) 0%, rgba(26,26,46,0.95) 100%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(201,168,76,0.3);
+      box-shadow: 0 24px 48px rgba(0,0,0,0.3);
+    }
+
+    .service-card:hover::before { opacity: 1; }
+
+    .service-icon {
+      font-size: 2rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .service-card h3 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      margin-bottom: 0.6rem;
+    }
+
+    .service-card p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      margin-bottom: 1.25rem;
+      line-height: 1.6;
+    }
+
+    .service-items {
+      list-style: none;
+      margin-bottom: 1.75rem;
+    }
+
+    .service-items li {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      padding: 0.3rem 0;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+
+    .service-items li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 0.75rem;
+    }
+
+    .service-price {
+      border-top: 1px solid var(--border);
+      padding-top: 1.25rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+
+    .price-amount {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    .price-note {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* Featured card */
+    .service-card.featured {
+      background: linear-gradient(135deg, var(--bg-card) 0%, rgba(15,52,96,0.7) 100%);
+      border-color: rgba(201,168,76,0.3);
+    }
+
+    .service-card.featured::before { opacity: 1; }
+
+    .featured-badge {
+      position: absolute;
+      top: 1rem; right: 1rem;
+      background: var(--accent);
+      color: var(--bg-dark);
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.6rem;
+      border-radius: 100px;
+    }
+
+    /* ===========================
+       Contact Section
+    =========================== */
+    #kontakt {
+      background:
+        linear-gradient(180deg, var(--bg-dark) 0%, #0f1b35 100%);
+      overflow: hidden;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 4rem;
+      margin-top: 2.5rem;
+      align-items: start;
+    }
+
+    .contact-info h3 {
+      font-size: 1.2rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-items { display: flex; flex-direction: column; gap: 0.75rem; }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.25rem;
+      background: rgba(22,33,62,0.5);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      transition: border-color var(--transition), transform var(--transition);
+    }
+
+    .contact-item:hover {
+      border-color: rgba(201,168,76,0.25);
+      transform: translateX(4px);
+    }
+
+    .contact-item-icon {
+      width: 42px;
+      height: 42px;
+      background: rgba(201,168,76,0.1);
+      border: 1px solid rgba(201,168,76,0.12);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .contact-item-text strong {
+      display: block;
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 700;
+      margin-bottom: 0.15rem;
+    }
+
+    .contact-item-text span, .contact-item-text a {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text-light);
+    }
+
+    .contact-item-text a:hover { color: var(--accent); }
+
+    .contact-social {
+      margin-top: 2rem;
+    }
+
+    .contact-social p {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .social-links { display: flex; flex-direction: column; gap: 0.5rem; }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: rgba(22,33,62,0.5);
+      border: 1px solid var(--border);
+      color: var(--text-muted) !important;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      transition: all var(--transition);
+    }
+
+    .social-link:hover {
+      border-color: rgba(201,168,76,0.3);
+      color: var(--accent) !important;
+      transform: translateX(4px);
+    }
+
+    /* Contact Form */
+    .contact-form-wrap {
+      background: rgba(22,33,62,0.5);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2.25rem;
+    }
+
+    .contact-form-wrap h3 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      margin-bottom: 0.4rem;
+    }
+
+    .contact-form-wrap > p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1.75rem;
+    }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1rem; }
+
+    .form-group label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      background: rgba(26,26,46,0.6);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text-light);
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.92rem;
+      padding: 0.8rem 1rem;
+      outline: none;
+      transition: border-color var(--transition), box-shadow var(--transition);
+      width: 100%;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(201,168,76,0.08);
+    }
+
+    .form-group textarea { resize: vertical; min-height: 110px; }
+    .form-group select option { background: var(--bg-dark); }
+
+    .gdpr-check {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin: 1.25rem 0 1.5rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .gdpr-check input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      margin-top: 2px;
+      flex-shrink: 0;
+      accent-color: var(--accent);
+      cursor: pointer;
+    }
+
+    .form-submit { width: 100%; font-size: 1rem; padding: 0.95rem; }
+
+    .form-msg {
+      margin-top: 1rem;
+      padding: 0.8rem 1rem;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      display: none;
+    }
+
+    .form-msg.success {
+      background: rgba(72, 199, 142, 0.12);
+      border: 1px solid rgba(72, 199, 142, 0.3);
+      color: #48c78e;
+      display: block;
+    }
+
+    .form-msg.error {
+      background: rgba(241, 70, 104, 0.12);
+      border: 1px solid rgba(241, 70, 104, 0.3);
+      color: #f14668;
+      display: block;
+    }
+
+    /* ===========================
+       Footer
+    =========================== */
+    footer {
+      background: var(--bg-dark);
+      border-top: 1px solid var(--border);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .footer-logo {
+      font-weight: 800;
+      font-size: 1.05rem;
+    }
+
+    .footer-logo span { color: var(--accent); }
+
+    footer p {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 0.25rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      font-size: 0.78rem;
+      font-weight: 600;
+      transition: color var(--transition);
+    }
+
+    .footer-links a:hover { color: var(--accent); }
+
+    /* ===========================
+       Animations
+    =========================== */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInRight {
+      from { opacity: 0; transform: translateX(28px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Staggered children */
+    .fade-in-stagger > .fade-in:nth-child(2) { transition-delay: 0.1s; }
+    .fade-in-stagger > .fade-in:nth-child(3) { transition-delay: 0.2s; }
+    .fade-in-stagger > .fade-in:nth-child(4) { transition-delay: 0.3s; }
+    .fade-in-stagger > .fade-in:nth-child(5) { transition-delay: 0.35s; }
+    .fade-in-stagger > .fade-in:nth-child(6) { transition-delay: 0.4s; }
+
+    /* ===========================
+       Responsive
+    =========================== */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; text-align: center; }
+      .hero-actions { justify-content: center; }
+      .hero-stats { justify-content: center; }
+      .hero-subtitle { margin: 0 auto 2.5rem; }
+      .hero-photo { max-width: 400px; margin: 0 auto; }
+      .hero-stat { padding-left: 0.8rem; }
+      #hero::before, #hero::after { display: none; }
+
+      .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .about-photo-single img { max-height: 360px; }
+
+      .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+
+      .fee-banner-inner { grid-template-columns: 1fr 1fr; }
+
+      .team-grid { grid-template-columns: 1fr 1fr; }
+
+      .about-left { position: static; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; flex-direction: column; position: fixed; top: 64px; left: 0; right: 0; background: rgba(26,26,46,0.98); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); padding: 1.5rem 2rem; gap: 1.25rem; }
+      .nav-links.open { display: flex; }
+      .nav-toggle { display: flex; }
+      .form-row { grid-template-columns: 1fr; }
+      section { padding: 50px 1.25rem; }
+      .services-grid { grid-template-columns: 1fr; }
+      .team-grid { grid-template-columns: 1fr; }
+      .fee-banner-inner { grid-template-columns: 1fr; }
+
+      .divider svg { height: 36px; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-stats { flex-direction: column; gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- =====================
+       Navigation
+  ===================== -->
+  <nav>
+    <div class="nav-logo">Marek <span>Musil</span></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#o-mne">O mně</a></li>
+      <li><a href="#tym">Tým</a></li>
+      <li><a href="#sluzby">Ceník</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+      <li><a href="#kontakt" class="nav-cta">Domluvit konzultaci</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Otevřít menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- =====================
+       Hero
+  ===================== -->
+  <section id="hero">
+    <div class="hero-inner">
+
+      <div class="hero-text">
+        <div class="hero-badge">Finanční poradce · Brno · osobně nebo online</div>
+        <h1>Platíte za radu,<br>ne za <em>uzavřené smlouvy</em></h1>
+        <p class="hero-subtitle">
+          Upřednostňuji model <strong>placeného poradenství</strong> – moje odměna
+          nezávisí na tom, jaký produkt vám doporučím. Žádný tlak, jen čistá
+          analýza vaší situace. Osobní schůzky v Brně, online konzultace
+          po celé ČR.
+        </p>
+        <div class="hero-actions">
+          <a href="#kontakt" class="btn-primary">Domluvit konzultaci</a>
+          <a href="#sluzby" class="btn-outline">Přehled ceníku</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <strong>10+</strong>
+            <span>let praxe</span>
+          </div>
+          <div class="hero-stat">
+            <strong>Placené</strong>
+            <span>poradenství</span>
+          </div>
+          <div class="hero-stat">
+            <strong>Online</strong>
+            <span>i osobní schůzky</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-photo">
+        <div class="hero-photo-frame">
+          <img
+            src="kancl.png"
+            alt="Marek Musil – finanční poradce"
+            loading="eager"
+          />
+        </div>
+        <div class="hero-photo-badge">
+          <div class="icon">🎓</div>
+          <div class="badge-text">
+            <strong>Člen AFP ČR</strong>
+            <span>Asociace finančních poradců ČR</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =====================
+       Value bar
+  ===================== -->
+  <div class="fee-banner">
+    <div class="fee-banner-inner">
+      <div class="fee-item">
+        <span class="fee-icon">✔️</span>
+        <span><strong>Jasná odměna</strong>Víte předem, co platíte</span>
+      </div>
+      <div class="fee-item">
+        <span class="fee-icon">✔️</span>
+        <span><strong>Bez tlaku na produkty</strong>Doporučím to, co vám sedí</span>
+      </div>
+      <div class="fee-item">
+        <span class="fee-icon">✔️</span>
+        <span><strong>Široký přesah</strong>Finance, právo, reality a další</span>
+      </div>
+      <div class="fee-item">
+        <span class="fee-icon">✔️</span>
+        <span><strong>Osobně i online</strong>Brno + celá ČR</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Divider: banner → about -->
+  <div class="divider">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" fill="none">
+      <path d="M0,0 L1440,0 L1440,30 Q1080,60 720,30 Q360,0 0,30 Z" fill="#16213e"/>
+    </svg>
+  </div>
+
+  <!-- =====================
+       O mně
+  ===================== -->
+  <section id="o-mne">
+    <div class="container">
+
+      <div class="about-grid">
+
+        <div class="about-left fade-in">
+          <div class="about-photo-single">
+            <img src="balon.jpg" alt="Marek Musil – nadhled a přesah" />
+          </div>
+
+          <!-- Certifikace pod fotkou -->
+          <div class="certs-strip">
+            <div class="certs-strip-label">Certifikace a odborná způsobilost</div>
+            <div class="certs-list">
+              <div class="cert-item">
+                <span class="cert-name">EUCS</span>
+                <span class="cert-desc">– ochrana práv klientů na finančním trhu</span>
+              </div>
+              <div class="cert-item">
+                <span class="cert-name">Investiční poradce</span>
+                <span class="cert-desc">– poradenství v oblasti investic</span>
+              </div>
+              <div class="cert-item">
+                <span class="cert-name">PFP</span>
+                <span class="cert-desc">– osobní finanční plánování</span>
+              </div>
+              <div class="cert-item">
+                <span class="cert-name">Penze</span>
+                <span class="cert-desc">– důchodové spoření a penzijní produkty</span>
+              </div>
+              <div class="cert-item">
+                <span class="cert-name">Pojištění</span>
+                <span class="cert-desc">– životní i neživotní pojistné produkty</span>
+              </div>
+              <div class="cert-item">
+                <span class="cert-name">Úvěry</span>
+                <span class="cert-desc">– spotřebitelské a hypoteční úvěry</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content fade-in">
+          <div class="section-label">O mně</div>
+          <h2 class="section-title">Jsem Marek Musil</h2>
+          <p>
+            Finančnímu poradenství se věnuji přes deset let. Věřím, že kvalitní
+            poradenství vzniká tam, kde klient platí za radu – ne tam,
+            kde poradce vydělává na provizích z uzavřených smluv. Proto
+            <strong>upřednostňuji model placeného poradenství</strong>: moje
+            odměna je jasná a předem dohodnutá a nezávisí na tom, co vám doporučím.
+          </p>
+          <p>
+            Osobní schůzky vedu v Brně, ale díky online konzultacím jsem
+            k dispozici klientům po celé České republice. Pracuji s lidmi
+            v různých životních fázích – zkušenosti z práce s klienty
+            s větším majetkem přináším i těm, kteří teprve začínají budovat,
+            a naopak.
+          </p>
+          <p>
+            Mám široký přesah přes hranice klasického finančního poradenství
+            a dokážu pomoct i s otázkami, které s financemi souvisejí jen
+            nepřímo. Tam, kde nestačím sám, zapojím odborníky ze svého týmu.
+          </p>
+
+          <div class="about-tags">
+            <span class="tag">Finanční plánování</span>
+            <span class="tag">Investice</span>
+            <span class="tag">Hypotéky a úvěry</span>
+            <span class="tag">Pojištění</span>
+            <span class="tag">Penze</span>
+            <span class="tag">Reality</span>
+            <span class="tag">Právní otázky</span>
+          </div>
+
+          <div class="about-highlight">
+            <div class="hl-icon">🏢</div>
+            <div>
+              <strong>Zakladatel Financero, s.r.o.</strong>
+              <span>Finančně poradenská firma a realitní kancelář. Člen Asociace finančních poradců ČR (AFP ČR).</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider: about → team -->
+  <div class="divider divider-flip">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" fill="none">
+      <path d="M0,60 L0,30 Q360,0 720,30 Q1080,60 1440,30 L1440,60 Z" fill="#16213e"/>
+    </svg>
+  </div>
+
+  <!-- =====================
+       Tým odborníků
+  ===================== -->
+  <section id="tym" class="pattern-overlay">
+    <div class="container">
+
+      <div class="fade-in">
+        <div class="section-label">Tým odborníků</div>
+        <h2 class="section-title">Komplexní pokrytí díky specialistům</h2>
+        <p class="section-desc">
+          Na specifická témata mám za sebou tým prověřených odborníků.
+          Vy komunikujete se mnou – já podle potřeby koordinuji.
+        </p>
+      </div>
+
+      <div class="team-grid fade-in-stagger">
+
+        <div class="team-card fade-in">
+          <div class="team-icon">🧭</div>
+          <div class="team-card-content">
+            <h4>Finanční a krizové poradenství</h4>
+            <p>Pomoc v obtížných finančních situacích, stabilizace rozpočtu, nastavení cesty k finanční rovnováze.</p>
+          </div>
+        </div>
+
+        <div class="team-card fade-in">
+          <div class="team-icon">🏠</div>
+          <div class="team-card-content">
+            <h4>Hypotéky a úvěry</h4>
+            <p>Srovnání nabídek bank, zpracování žádosti, výběr financování pro bydlení i podnikání.</p>
+          </div>
+        </div>
+
+        <div class="team-card fade-in">
+          <div class="team-icon">📈</div>
+          <div class="team-card-content">
+            <h4>Investice</h4>
+            <p>Správa investičního portfolia, fondy, ETF, alternativní investice a pravidelné reporty.</p>
+          </div>
+        </div>
+
+        <div class="team-card fade-in">
+          <div class="team-icon">🛡️</div>
+          <div class="team-card-content">
+            <h4>Pojištění</h4>
+            <p>Životní, majetkové i podnikatelské pojištění. Revize smluv a optimalizace krytí.</p>
+          </div>
+        </div>
+
+        <div class="team-card fade-in">
+          <div class="team-icon">⚖️</div>
+          <div class="team-card-content">
+            <h4>Právní služby</h4>
+            <p>Smlouvy, daně, dědictví a majetková práva v kontextu finančního plánování.</p>
+          </div>
+        </div>
+
+        <div class="team-card fade-in">
+          <div class="team-icon">🏢</div>
+          <div class="team-card-content">
+            <h4>Realitní služby</h4>
+            <p>Koupě, prodej i pronájem nemovitostí. Propojení realitní transakce s financováním.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider: team → pricing -->
+  <div class="divider">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" fill="none">
+      <path d="M0,0 L1440,0 L1440,30 Q1080,60 720,30 Q360,0 0,30 Z" fill="#16213e"/>
+    </svg>
+  </div>
+
+  <!-- =====================
+       Ceník
+  ===================== -->
+  <section id="sluzby" class="glow-br">
+    <div class="container">
+
+      <div class="services-header fade-in">
+        <div class="section-label">Ceník služeb</div>
+        <h2 class="section-title">Jasná odměna, žádné skryté poplatky</h2>
+        <p class="section-desc">
+          Ceny jsou orientační – konkrétní rozsah a odměnu vždy domluvíme
+          ještě před začátkem spolupráce.
+        </p>
+      </div>
+
+      <div class="services-grid fade-in-stagger">
+
+        <!-- Tvorba finančního plánu -->
+        <div class="service-card featured fade-in">
+          <span class="featured-badge">Stěžejní služba</span>
+          <div class="service-icon">📋</div>
+          <h3>Tvorba finančního plánu</h3>
+          <p>Komplexní zmapování vaší situace, společné stanovení cílů a konkrétní strategie, jak jich dosáhnout.</p>
+          <ul class="service-items">
+            <li>Stanovení finančních cílů</li>
+            <li>Zhodnocení současné situace</li>
+            <li>Návrh realizace finančních cílů</li>
+            <li>Vzdělávání v oblasti finanční gramotnosti</li>
+          </ul>
+          <div class="service-price">
+            <span class="price-amount">4 000 – 15 000 Kč</span>
+            <span class="price-note">dle rozsahu</span>
+          </div>
+        </div>
+
+        <!-- Tvorba finančního portfolia -->
+        <div class="service-card fade-in">
+          <div class="service-icon">📈</div>
+          <h3>Tvorba finančního portfolia</h3>
+          <p>Sestavení investičního portfolia přesně podle vašich možností, s průběžnou správou a reportingem.</p>
+          <ul class="service-items">
+            <li>Sestavení portfolia na míru</li>
+            <li>Pravidelné konzultace</li>
+            <li>Rebalancování portfolia</li>
+            <li>Pravidelné reporty vývoje hodnoty</li>
+          </ul>
+          <div class="service-price">
+            <span class="price-amount">3 000 – 25 000 Kč</span>
+            <span class="price-note">dle rozsahu správy</span>
+          </div>
+        </div>
+
+        <!-- Servis úvěrových produktů -->
+        <div class="service-card fade-in">
+          <div class="service-icon">🏠</div>
+          <h3>Servis úvěrových produktů</h3>
+          <p>Vyhodnocení vaší úvěrové situace, porovnání nabídek a kompletní zpracování administrativy.</p>
+          <ul class="service-items">
+            <li>Vyhodnocení klientovy situace</li>
+            <li>Informace o dostupných produktech</li>
+            <li>Problematika úvěrových produktů</li>
+            <li>Zpracování administrativy</li>
+          </ul>
+          <div class="service-price">
+            <span class="price-amount">3 000 – 10 000 Kč</span>
+            <span class="price-note">dle složitosti případu</span>
+          </div>
+        </div>
+
+        <!-- Produktové srovnání -->
+        <div class="service-card fade-in">
+          <div class="service-icon">🔍</div>
+          <h3>Produktové srovnání</h3>
+          <p>Porovnání aktuální nabídky na trhu napříč pojišťovnami, bankami a dalšími poskytovateli.</p>
+          <ul class="service-items">
+            <li>Životní a neživotní pojištění</li>
+            <li>Podnikatelské pojištění</li>
+            <li>Spotřebitelské a podnikatelské úvěry</li>
+            <li>Leasingy</li>
+          </ul>
+          <div class="service-price">
+            <span class="price-amount">3 000 – 10 000 Kč</span>
+            <span class="price-note">dle počtu srovnávaných produktů</span>
+          </div>
+        </div>
+
+        <!-- Obecná konzultace -->
+        <div class="service-card fade-in">
+          <div class="service-icon">💬</div>
+          <h3>Obecná konzultace</h3>
+          <p>Odborné stanovisko k jakýmkoliv otázkám o vašich financích nebo přidruženým tématům.</p>
+          <ul class="service-items">
+            <li>Finanční, investiční i majetkové otázky</li>
+            <li>Přesah do právních a dalších témat</li>
+            <li>Osobně v Brně nebo online odkudkoliv</li>
+            <li>Bez závazku dalších produktů</li>
+          </ul>
+          <div class="service-price">
+            <span class="price-amount">900 Kč</span>
+            <span class="price-note">/ hodina</span>
+          </div>
+        </div>
+
+        <!-- Realitní služby -->
+        <div class="service-card fade-in">
+          <div class="service-icon">🏢</div>
+          <h3>Realitní služby</h3>
+          <p>Koupě, prodej a pronájem nemovitostí přes Financero – v propojení s finančním plánováním.</p>
+          <ul class="service-items">
+            <li>Koupě a prodej nemovitostí</li>
+            <li>Pronájmy bytů a domů</li>
+            <li>Ocenění nemovitosti</li>
+            <li>Propojení s financováním</li>
+          </ul>
+          <div class="service-price">
+            <span class="price-amount">1 500 Kč</span>
+            <span class="price-note">/ hodina · cena dle rozsahu spolupráce</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider: pricing → contact -->
+  <div class="divider divider-flip">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" fill="none">
+      <path d="M0,60 L0,30 Q360,0 720,30 Q1080,60 1440,30 L1440,60 Z" fill="#16213e"/>
+    </svg>
+  </div>
+
+  <!-- =====================
+       Kontakt
+  ===================== -->
+  <section id="kontakt" class="glow-tl">
+    <div class="container">
+
+      <div class="fade-in">
+        <div class="section-label">Kontakt</div>
+        <h2 class="section-title">Pojďme si promluvit</h2>
+        <p class="section-desc">Napište mi nebo zavolejte – ozvu se do 24 hodin. Schůzky domlouvám osobně i online.</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Kontaktní údaje -->
+        <div class="contact-info fade-in">
+          <h3>Spojte se se mnou</h3>
+          <div class="contact-items">
+
+            <div class="contact-item">
+              <div class="contact-item-icon">📞</div>
+              <div class="contact-item-text">
+                <strong>Telefon</strong>
+                <a href="tel:+420732187153">+420 732 187 153</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon">✉️</div>
+              <div class="contact-item-text">
+                <strong>E-mail</strong>
+                <a href="mailto:marek.musil@financero.cz">marek.musil@financero.cz</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon">📍</div>
+              <div class="contact-item-text">
+                <strong>Osobní schůzky</strong>
+                <span>Brno</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon">💻</div>
+              <div class="contact-item-text">
+                <strong>Online konzultace</strong>
+                <span>Po celé ČR</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="contact-social">
+            <p>Najdete mě také zde</p>
+            <div class="social-links">
+              <a href="https://www.linkedin.com/in/marekmusil/" target="_blank" rel="noopener" class="social-link">
+                💼 LinkedIn – Marek Musil
+              </a>
+              <a href="https://www.facebook.com/marek.musil.3/?locale=cs_CZ" target="_blank" rel="noopener" class="social-link">
+                📘 Facebook – Marek Musil
+              </a>
+              <a href="https://www.financero.cz/profil-poradce/marek-musil" target="_blank" rel="noopener" class="social-link">
+                🌐 Profil na Financero.cz
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kontaktní formulář -->
+        <div class="contact-form-wrap fade-in">
+          <h3>Napište mi</h3>
+          <p>Popište svoji situaci a já vám navrhnu, jak vám mohu pomoct.</p>
+
+          <form id="contactForm" action="https://formspree.io/f/xpqozkjr" method="POST" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">Jméno *</label>
+                <input type="text" id="fname" name="jmeno" placeholder="Jan Novák" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Telefon</label>
+                <input type="tel" id="phone" name="telefon" placeholder="+420 123 456 789" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">E-mail *</label>
+              <input type="email" id="email" name="email" placeholder="jan@example.cz" required />
+            </div>
+
+            <div class="form-group">
+              <label for="tema">Téma</label>
+              <select id="tema" name="tema">
+                <option value="">– vyberte oblast –</option>
+                <option>Finanční plán</option>
+                <option>Investice a portfolio</option>
+                <option>Hypotéka / úvěr</option>
+                <option>Pojištění</option>
+                <option>Penze a spoření</option>
+                <option>Realitní služby</option>
+                <option>Obecná konzultace</option>
+                <option>Jiné</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="zprava">Zpráva *</label>
+              <textarea id="zprava" name="zprava" placeholder="Popište stručně svoji situaci nebo otázku…" required></textarea>
+            </div>
+
+            <div class="gdpr-check">
+              <input type="checkbox" id="gdpr" name="gdpr" required />
+              <label for="gdpr">
+                Souhlasím se zpracováním osobních údajů za účelem odpovědi na mou poptávku.
+                Vaše data budou použita pouze pro komunikaci a nebudou sdílena s třetími stranami.
+              </label>
+            </div>
+
+            <button type="submit" class="btn-primary form-submit">Odeslat zprávu</button>
+            <div class="form-msg" id="formMsg"></div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       Footer
+  ===================== -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Marek <span>Musil</span></div>
+      <p>Finanční poradce · Financero, s.r.o. · IČO: 08982171</p>
+      <div class="footer-links">
+        <a href="https://financero.cz" target="_blank" rel="noopener">Financero.cz</a>
+        <a href="mailto:marek.musil@financero.cz">marek.musil@financero.cz</a>
+        <a href="tel:+420732187153">+420 732 187 153</a>
+      </div>
+      <p style="margin-top: 0.5rem;">© 2025 Marek Musil. Všechna práva vyhrazena.</p>
+    </div>
+  </footer>
+
+  <!-- =====================
+       JavaScript
+  ===================== -->
+  <script>
+    // --- Mobile nav toggle ---
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('open');
+    });
+
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => links.classList.remove('open'));
+    });
+
+    // --- Scroll fade-in (with stagger support) ---
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // --- Nav background on scroll ---
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 80) {
+        nav.style.background = 'rgba(26, 26, 46, 0.97)';
+        nav.style.borderBottomColor = 'rgba(201,168,76,0.12)';
+      } else {
+        nav.style.background = 'rgba(26, 26, 46, 0.88)';
+        nav.style.borderBottomColor = 'rgba(201,168,76,0.08)';
+      }
+    }, { passive: true });
+
+    // --- Contact form via Formspree ---
+    const form = document.getElementById('contactForm');
+    const msg  = document.getElementById('formMsg');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (!form.checkValidity()) {
+        msg.textContent = 'Vyplňte prosím všechna povinná pole.';
+        msg.className = 'form-msg error';
+        return;
+      }
+
+      const btn = form.querySelector('.form-submit');
+      btn.disabled = true;
+      btn.textContent = 'Odesílám…';
+      msg.className = 'form-msg';
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          msg.textContent = '✓ Zpráva odeslána! Ozvu se do 24 hodin.';
+          msg.className = 'form-msg success';
+          form.reset();
+        } else {
+          throw new Error();
+        }
+      } catch {
+        msg.textContent = 'Chyba při odesílání. Zkuste zavolat nebo napsat na e-mail.';
+        msg.className = 'form-msg error';
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Odeslat zprávu';
+      }
+    });
+  </script>
+
+</body>
+</html>
