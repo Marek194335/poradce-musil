@@ -18,7 +18,10 @@ Cílem webu je budování osobního brandu a důvěryhodnosti – ne firemní pr
 - **Doména webu:** poradce-musil.cz
 - **Osobní schůzky:** Brno
 - **Online konzultace:** celá ČR
-- **Členství:** Asociace finančních poradců ČR (AFP ČR)
+- **Členství:** Asociace finančních poradců ČR (AFP ČR) – odborná komunita poradců
+- **Další podnikání:** zakladatel skupiny Financero (poradenství + realitní kancelář), spolumajitel zubní ordinace Dentárko (dentarko.com)
+- **Technologie:** nadšenec do technologií, zavádí umělou inteligenci ve svých firmách (školení, vývoj vlastních nástrojů)
+- **Koníčky:** cestování na motorce, fotbal a další sporty
 
 ---
 
@@ -39,6 +42,7 @@ Cílem webu je budování osobního brandu a důvěryhodnosti – ne firemní pr
 - **Multioborový přesah** – Marek dokáže konzultovat i přidružené otázky (právo, reality) a zapojuje tým specialistů.
 - **Propojení perspektiv** – zkušenosti z práce s majetnějšími klienty přenáší k těm v akumulační fázi a naopak.
 - **Tým odborníků** – na specifická témata má za sebou prověřené specialisty. Klient komunikuje s Markem, on koordinuje.
+- **Osobní přesah, decentně** – web ukazuje i podnikání (Financero, Dentárko), zavádění umělé inteligence a koníčky (motorka, fotbal, sport). Vždy fakticky a stručně, bez vychloubání – cíl je ucelený obrázek, ne výčet úspěchů.
 
 ## Cíl webu
 
@@ -52,17 +56,17 @@ Cílem webu je budování osobního brandu a důvěryhodnosti – ne firemní pr
 ## Obsah webu
 
 ### Sekce
-1. **Hero** – titulní fotka (kancl.png), badge „Finanční poradce · Brno · osobně nebo online", headline o placeném poradenství, CTA tlačítka, 3 stat boxy
-2. **Value bar** – 4 hodnoty: jasná odměna, bez tlaku na produkty, široký přesah, osobně i online
-3. **O mně** – layout: levý sloupec (fotka balon.jpg + certifikace), pravý sloupec (bio, tagy, box Financero/AFP ČR). Levý sloupec je sticky.
+1. **Hero** – obrovský nadpis „MAREK MUSIL" s typing efektem (střídání frází), minimalistický design, CTA tlačítka, šipka dolů
+2. **Foto + Values strip** – layout: fotka portret.jpg vlevo (portrét 3:4), vpravo 4 hodnoty s nadpisem „Proč spolupracovat se mnou?" v kartu se zaoblenými rohy
+3. **O mně** – layout: levý sloupec (bio vč. odstavce o podnikání/AI a věty o koníčcích, pod ní decentní široká fotka motorka.jpg v poměru 21:9, tagy, 3 boxy – Financero + Dentárko + AFP ČR, boxy Financero a Dentárko s odkazy na weby), pravý sloupec (fotka balon.jpg + certifikace). Pravý sloupec je sticky.
 4. **Tým odborníků** – 6 karet (grid 3×2): finanční a krizové poradenství, hypotéky a úvěry, investice, pojištění, právní služby, realitní služby
-5. **Ceník služeb** – 6 služeb s cenami dle ODS souboru
+5. **Ceník služeb** – 6 služeb s cenami
 6. **Kontakt** – telefon, email, osobní schůzky (Brno), online (celá ČR), 3 sociální sítě, formulář (Formspree)
 
 ### Ceník služeb
 | Služba | Cena |
 |---|---|
-| Tvorba finančního plánu | 4 000 – 15 000 Kč |
+| Nastavení rodinného rozpočtu ⭐ | 900 Kč / měsíčně |
 | Tvorba finančního portfolia | 3 000 – 25 000 Kč |
 | Servis úvěrových produktů | 3 000 – 10 000 Kč |
 | Produktové srovnání | 3 000 – 10 000 Kč |
@@ -77,7 +81,7 @@ Cílem webu je budování osobního brandu a důvěryhodnosti – ne firemní pr
 - **Právní služby** – smlouvy, daně, dědictví, majetková práva
 - **Realitní služby** – koupě, prodej, pronájem, propojení s financováním
 
-### Certifikace (pod fotkou v levém sloupci sekce O mně)
+### Certifikace (pod fotkou v pravém sloupci sekce O mně)
 - **EUCS** – ochrana práv klientů na finančním trhu (European Compensation Services)
 - **Investiční poradce** – poradenství v oblasti investic
 - **PFP** – osobní finanční plánování
@@ -98,46 +102,59 @@ Cílem webu je budování osobního brandu a důvěryhodnosti – ne firemní pr
 - **Technologie:** čisté HTML + CSS + vanilla JS – žádné frameworky, žádné závislosti kromě Google Fonts
 - **Typ webu:** landing page / digitální vizitka – single-page, vše v jednom `index.html`
 - **Responzivní:** mobile-first, breakpointy 900px / 768px / 480px
-- Rychlé načítání – minimální externí zdroje (pouze Google Fonts Nunito)
+- Rychlé načítání – minimální externí zdroje (pouze Google Fonts Inter)
 - Podpora českých znaků (UTF-8)
-- Kontaktní formulář přes **Formspree** (bez vlastního backendu)
+- Kontaktní formulář přes **Formspree** (ID: xpqozkjr, bez vlastního backendu)
 - Smooth scroll, fade-in animace (IntersectionObserver), staggered animace, hover efekty
+- Typing efekt v hero sekci (střídání frází)
 
 ## Design
 
 ### Vizuální styl
-- Inspirace webem **financero.cz** – tmavý prémiový vzhled, čistý layout
-- Fotografie autora jako klíčový prvek (2 fotky: kancl.png = hero, balon.jpg = O mně)
-- Velká hero sekce s výrazným nadpisem a CTA
-- **SVG wave oddělovače** mezi sekcemi (plynulé přechody)
-- **Dekorativní prvky:** rohové zlaté čáry v hero, tečkovaný pattern, glow efekty
-- **Gradient pozadí** sekcí (ne ploché barvy)
-- **Kompaktní layout** – minimální zbytečné mezery, obsah hustě ale přehledně
+- Inspirace webem **faborsky.cz** – čistý minimalistický světlý design, hodně bílého prostoru
+- Obrovská typografie jména v hero jako dominantní vizuální prvek
+- Fotografie autora jako klíčový prvek (3 fotky: portret.jpg = foto+values strip + OG obrázek, balon.jpg = sekce O mně vpravo, motorka.jpg = decentní široká fotka u koníčků v sekci O mně)
+- **Jednoduché oddělovače** – tenká linka (separator) mezi sekcemi
+- **Bez dekorativních prvků** – čistý, vzdušný layout
+- **Kompaktní layout** – přehledný ale ne roztáhlý
 
 ### Typografie
-- **Font: Nunito** (Google Fonts)
-- Nadpisy: Nunito ExtraBold (800)
-- Tělo textu: Nunito Regular (400) / SemiBold (600) / Bold (700)
+- **Font: Inter** (Google Fonts)
+- Nadpisy: Inter Black (900)
+- Tělo textu: Inter Regular (400) / Medium (500) / SemiBold (600) / Bold (700)
 
 ### Barevná paleta
 ```
---bg-dark:      #1a1a2e   /* tmavé navy pozadí (primární) */
---bg-section:   #16213e   /* lehce světlejší sekce */
---bg-card:      #0f3460   /* karty a boxy */
---accent:       #c9a84c   /* zlatá – akcent, CTA tlačítka */
---accent-hover: #e2c16a   /* světlejší zlatá pro hover */
---text-light:   #ffffff   /* bílý text */
---text-muted:   #a0aec0   /* šedý text – popisky */
---border:       #2d3748   /* jemné bordery */
+--bg:             #ffffff   /* bílé pozadí (primární) */
+--bg-soft:        #f7f7f5   /* jemně šedé pozadí (sekce, karty) */
+--bg-dark:        #0f0f0f   /* tmavá pro tlačítka, text */
+--accent:         #4a3aff   /* fialová – accent, featured prvky */
+--accent-hover:   #3525e6   /* tmavší fialová pro hover */
+--text:           #1a1a1a   /* primární text */
+--text-secondary: #6b6b6b   /* sekundární text */
+--text-muted:     #999999   /* tlumený text – popisky */
+--border:         #e8e8e8   /* jemné bordery */
 ```
 
 ### Layout principy
 - Mobile-first, responzivní
-- Sekce na celou šířku s gradientním tmavým pozadím
-- Bílý text na tmavém pozadí, zlatý akcent pro důležité prvky
-- Zaoblené rohy karet (border-radius: 14px)
+- Světlé pozadí, tmavý text, fialový accent
+- Zaoblené rohy karet (border-radius: 16px)
+- Pill-shaped tlačítka (border-radius: 100px)
 - Jemné stíny, hover animace, staggered fade-in
-- Sticky levý sloupec v sekci O mně (fotka + certifikace)
+- Sticky pravý sloupec v sekci O mně (fotka + certifikace)
+- Foto+values strip: fotka vlevo (3:4), hodnoty vpravo
+
+---
+
+## Hosting a deployment
+
+- **Repozitář:** github.com/Marek194335/poradce-musil
+- **Hosting:** Vercel (auto-deploy z main branch)
+- **Doména:** poradce-musil.cz (registrátor Subreg.cz)
+- **DNS:** A záznam → 216.198.79.1, CNAME www → cname.vercel-dns.com
+- **SSL:** automaticky přes Vercel (Let's Encrypt)
+- **SEO:** Schema.org JSON-LD, sitemap.xml, robots.txt, OG/Twitter tagy
 
 ---
 
@@ -154,12 +171,17 @@ Cílem webu je budování osobního brandu a důvěryhodnosti – ne firemní pr
 ```
 /
 ├── index.html              # Celý web v jednom souboru (HTML + CSS + JS)
-├── kancl.png               # Titulní fotka (hero sekce)
-├── balon.jpg               # Sekundární fotka (sekce O mně, levý sloupec)
+├── portret.jpg             # Fotka (foto+values strip + OG/Schema obrázek)
+├── balon.jpg               # Fotka (sekce O mně, pravý sloupec)
+├── motorka.jpg             # Fotka (sekce O mně, koníčky – motorka)
+├── kancl.png               # Původní fotka – už se nepoužívá (ponechána kvůli starým náhledům)
+├── robots.txt              # Povolení indexace pro vyhledávače
+├── sitemap.xml             # Mapa webu pro vyhledávače
 ├── ceník.ods               # Zdrojový ceník služeb
 ├── odkazy.txt              # Odkazy na sociální sítě
 ├── *.pdf                   # Certifikáty (EUCS, PFP, Penze, Pojištění, Úvěry, Investiční poradce)
 ├── poradce musil web.md    # Tento soubor – dokumentace projektu
+├── .gitignore              # Ignorované soubory (PDF, ODS, Prompt.txt)
 └── .claude/
     └── launch.json         # Konfigurace dev serveru
 ```
@@ -178,5 +200,5 @@ Cílem webu je budování osobního brandu a důvěryhodnosti – ne firemní pr
 8. Osobní schůzky pouze Brno, online konzultace celá ČR
 9. Model placeného poradenství je „upřednostňovaný", ne „výhradní"
 10. Dbej na kompaktnost – stránka nemá být zbytečně roztáhlá
-11. Zachovej stávající vizuální styl (tmavé navy + zlatá), neměnit barevnou paletu
+11. Zachovej stávající vizuální styl (světlý minimalistický + fialový accent), neměnit barevnou paletu
 12. Při úpravách vždy aktualizovat i tento MD soubor
