@@ -60,7 +60,7 @@
       "sameAs": [
         "https://www.linkedin.com/in/marekmusil/",
         "https://www.facebook.com/marek.musil.3/",
-        "https://www.financero.cz/profil-poradce/marek-musil"
+        "https://financero.cz/tym/marek-musil"
       ]
     },
     "memberOf": { "@type": "Organization", "name": "Asociace finančních poradců ČR (AFP ČR)" },
@@ -70,24 +70,29 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
 
   <style>
     /* ===========================
        CSS Custom Properties
+       Paleta sjednocená s financero.cz
     =========================== */
     :root {
       --bg: #ffffff;
-      --bg-soft: #f7f7f5;
-      --bg-dark: #0f0f0f;
-      --accent: #4a3aff;
-      --accent-hover: #3525e6;
-      --text: #1a1a1a;
-      --text-secondary: #6b6b6b;
-      --text-muted: #999999;
-      --border: #e8e8e8;
-      --border-hover: #d0d0d0;
-      --radius: 16px;
+      --bg-soft: #f9fafb;
+      --bg-warm: #fafaf7;
+      --navy: #0d2b50;
+      --navy-mid: #143e70;
+      --navy-light: #1b5191;
+      --navy-deep: #061629;
+      --orange: #e39b2c;
+      --orange-light: #eaa840;
+      --orange-soft: #fae8c7;
+      --text: #1f2937;
+      --text-secondary: #4b5563;
+      --text-muted: #6b7280;
+      --border: #e5e7eb;
+      --border-hover: #d1d5db;
       --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
@@ -98,7 +103,7 @@
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.65;
@@ -107,8 +112,8 @@
     }
 
     img { display: block; max-width: 100%; }
-    a { color: var(--accent); text-decoration: none; transition: color var(--transition); }
-    a:hover { color: var(--accent-hover); }
+    a { color: var(--navy-light); text-decoration: none; transition: color var(--transition); }
+    a:hover { color: var(--orange); }
 
     /* ===========================
        Navigation
@@ -130,39 +135,38 @@
     }
 
     .nav-logo {
-      font-weight: 900;
+      font-weight: 800;
       font-size: 1.1rem;
-      color: var(--text);
-      letter-spacing: -0.02em;
+      color: var(--navy);
+      letter-spacing: -0.01em;
     }
 
     .nav-links {
       display: flex;
-      gap: 2.5rem;
+      gap: 2.25rem;
       list-style: none;
       align-items: center;
     }
 
     .nav-links a {
       color: var(--text-secondary);
-      font-weight: 600;
+      font-weight: 700;
       font-size: 0.88rem;
       transition: color var(--transition);
     }
 
-    .nav-links a:hover { color: var(--text); }
+    .nav-links a:hover { color: var(--orange); }
 
     .nav-cta {
-      background: var(--text) !important;
-      color: var(--bg) !important;
-      padding: 0.5rem 1.2rem;
-      border-radius: 100px;
+      background: var(--navy) !important;
+      color: #ffffff !important;
+      padding: 0.55rem 1.3rem;
       font-weight: 700 !important;
       font-size: 0.85rem !important;
-      transition: opacity var(--transition) !important;
+      transition: background var(--transition) !important;
     }
 
-    .nav-cta:hover { opacity: 0.8; color: var(--bg) !important; }
+    .nav-cta:hover { background: var(--navy-mid) !important; color: #ffffff !important; }
 
     .nav-toggle {
       display: none;
@@ -178,7 +182,7 @@
       display: block;
       width: 22px;
       height: 2px;
-      background: var(--text);
+      background: var(--navy);
       border-radius: 2px;
       transition: all 0.3s;
     }
@@ -187,32 +191,35 @@
        Hero Section
     =========================== */
     #hero {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 120px 2rem 80px;
-      position: relative;
-      overflow: hidden;
+      padding: 150px 2rem 75px;
       background: var(--bg);
     }
 
-    .hero-subtitle-top {
-      font-size: 1rem;
-      color: var(--text-secondary);
-      font-weight: 500;
-      margin-bottom: 1.5rem;
+    .hero-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .hero-label {
+      color: var(--orange);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
       animation: fadeInUp 0.6s ease both;
     }
 
     .hero-name {
-      font-size: clamp(4rem, 12vw, 10rem);
-      font-weight: 900;
-      line-height: 0.9;
-      letter-spacing: -0.04em;
-      color: var(--accent);
+      font-size: clamp(3.4rem, 7.5vw, 5.8rem);
+      font-weight: 300;
+      line-height: 1.02;
+      letter-spacing: -0.03em;
+      color: var(--navy);
       margin-bottom: 1.5rem;
       animation: fadeInUp 0.6s ease 0.1s both;
     }
@@ -221,7 +228,7 @@
       font-size: 1.15rem;
       color: var(--text-secondary);
       font-weight: 400;
-      margin-bottom: 2.5rem;
+      margin-bottom: 2.25rem;
       min-height: 1.8em;
       animation: fadeInUp 0.6s ease 0.2s both;
     }
@@ -230,7 +237,7 @@
       display: inline-block;
       width: 2px;
       height: 1.15em;
-      background: var(--accent);
+      background: var(--orange);
       margin-left: 2px;
       vertical-align: text-bottom;
       animation: blink 1s step-end infinite;
@@ -242,89 +249,99 @@
 
     .hero-actions {
       display: flex;
-      gap: 1rem;
-      justify-content: center;
+      gap: 1.75rem;
+      align-items: center;
       flex-wrap: wrap;
       animation: fadeInUp 0.6s ease 0.3s both;
     }
 
-    .hero-scroll-hint {
-      position: absolute;
-      bottom: 2.5rem;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--text-muted);
-      font-size: 0.75rem;
-      font-weight: 500;
-      animation: fadeInUp 0.6s ease 0.5s both;
+    .hero-photo {
+      animation: fadeInUp 0.6s ease 0.2s both;
     }
 
-    .scroll-arrow {
-      width: 20px;
-      height: 20px;
-      border-right: 2px solid var(--text-muted);
-      border-bottom: 2px solid var(--text-muted);
-      transform: rotate(45deg);
-      animation: scrollBounce 2s ease infinite;
-    }
-
-    @keyframes scrollBounce {
-      0%, 100% { transform: rotate(45deg) translateY(0); }
-      50% { transform: rotate(45deg) translateY(6px); }
+    .hero-photo img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center top;
     }
 
     /* ===========================
        Buttons
     =========================== */
     .btn-primary {
-      background: var(--text);
-      color: var(--bg);
-      font-family: 'Inter', sans-serif;
+      background: var(--navy);
+      color: #ffffff;
+      font-family: 'Nunito', sans-serif;
       font-weight: 700;
       font-size: 0.95rem;
-      padding: 0.85rem 2rem;
-      border-radius: 100px;
+      padding: 0.85rem 1.9rem;
       border: none;
       cursor: pointer;
-      transition: opacity var(--transition), transform var(--transition);
+      transition: background var(--transition), transform var(--transition);
       display: inline-block;
     }
 
     .btn-primary:hover {
-      opacity: 0.85;
-      color: var(--bg);
+      background: var(--navy-mid);
+      color: #ffffff;
       transform: translateY(-1px);
     }
 
-    .btn-outline {
-      background: transparent;
-      color: var(--text);
-      font-family: 'Inter', sans-serif;
-      font-weight: 600;
+    .btn-link {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
       font-size: 0.95rem;
-      padding: 0.85rem 2rem;
-      border-radius: 100px;
-      border: 1.5px solid var(--border);
-      cursor: pointer;
-      transition: border-color var(--transition), transform var(--transition);
+      color: var(--navy);
+      border-bottom: 2px solid var(--orange);
+      padding-bottom: 2px;
+      transition: color var(--transition);
       display: inline-block;
     }
 
-    .btn-outline:hover {
-      border-color: var(--text);
-      color: var(--text);
-      transform: translateY(-1px);
+    .btn-link:hover { color: var(--orange); }
+
+    /* ===========================
+       Values Band (pod hero)
+    =========================== */
+    .values-band {
+      background: var(--bg-soft);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 2.5rem 2rem;
+    }
+
+    .values-band-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+
+    .value-item h4 {
+      font-size: 0.92rem;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 0.2rem;
+    }
+
+    .value-item h4::before {
+      content: '— ';
+      color: var(--orange);
+    }
+
+    .value-item p {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.5;
     }
 
     /* ===========================
        Section Commons
     =========================== */
     section {
-      padding: 100px 2rem;
+      padding: 95px 2rem;
       position: relative;
     }
 
@@ -335,20 +352,21 @@
 
     .section-label {
       display: inline-block;
-      color: var(--accent);
+      color: var(--orange);
       font-size: 0.78rem;
       font-weight: 700;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.9rem;
     }
 
     .section-title {
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 900;
-      line-height: 1.1;
+      font-size: clamp(2rem, 4vw, 2.9rem);
+      font-weight: 300;
+      line-height: 1.12;
       margin-bottom: 1.25rem;
-      letter-spacing: -0.03em;
+      letter-spacing: -0.02em;
+      color: var(--navy);
     }
 
     .section-desc {
@@ -358,100 +376,51 @@
       line-height: 1.7;
     }
 
-    /* Separator */
-    .separator {
-      max-width: 1100px;
-      margin: 0 auto;
-      height: 1px;
-      background: var(--border);
-    }
-
     /* ===========================
-       Photo + Values Strip
+       Jak spolupráce probíhá
     =========================== */
-    .intro-strip {
-      padding: 0 2rem;
+    #spoluprace {
       background: var(--bg);
     }
 
-    .intro-strip-inner {
-      max-width: 1100px;
-      margin: 0 auto;
+    .steps-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0;
-      border-radius: 24px;
-      overflow: hidden;
-      border: 1px solid var(--border);
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+      margin-top: 3rem;
     }
 
-    .intro-photo {
-      aspect-ratio: 3 / 4;
-      overflow: hidden;
+    .step {
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
     }
 
-    .intro-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
+    .step-num {
+      font-size: 2.6rem;
+      font-weight: 300;
+      color: var(--orange);
+      line-height: 1;
+      margin-bottom: 0.9rem;
     }
 
-    .intro-values {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 3rem;
-      gap: 1.75rem;
-      background: var(--bg-soft);
-    }
-
-    .intro-values-title {
-      font-size: 1.4rem;
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      line-height: 1.2;
+    .step h3 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--navy);
       margin-bottom: 0.5rem;
     }
 
-    .value-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-    }
-
-    .value-item-icon {
-      width: 40px;
-      height: 40px;
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.1rem;
-      flex-shrink: 0;
-    }
-
-    .value-item-text h4 {
+    .step p {
       font-size: 0.92rem;
-      font-weight: 800;
-      margin-bottom: 0.15rem;
-      letter-spacing: -0.01em;
-    }
-
-    .value-item-text p {
-      font-size: 0.82rem;
       color: var(--text-secondary);
-      line-height: 1.5;
+      line-height: 1.7;
     }
 
     /* ===========================
        About Section
     =========================== */
     #o-mne {
-      background: var(--bg);
+      background: var(--bg-warm);
     }
 
     .about-grid {
@@ -467,12 +436,8 @@
     }
 
     .about-photo {
-      border-radius: 20px;
       overflow: hidden;
       margin-bottom: 1.5rem;
-    }
-
-    .about-photo {
       aspect-ratio: 4 / 5;
     }
 
@@ -486,15 +451,14 @@
 
     .certs-strip {
       padding: 1.25rem;
-      background: var(--bg-soft);
-      border-radius: var(--radius);
+      background: var(--bg);
       border: 1px solid var(--border);
     }
 
     .certs-strip-label {
       font-size: 0.72rem;
       font-weight: 700;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--text-muted);
       margin-bottom: 0.75rem;
@@ -517,12 +481,12 @@
 
     .cert-item::before {
       content: '—';
-      color: var(--accent);
+      color: var(--orange);
       font-weight: 700;
       flex-shrink: 0;
     }
 
-    .cert-name { font-weight: 700; color: var(--text); }
+    .cert-name { font-weight: 800; color: var(--navy); }
     .cert-desc { color: var(--text-secondary); }
 
     .about-content h2 { margin-bottom: 1.5rem; }
@@ -534,9 +498,10 @@
       line-height: 1.8;
     }
 
+    .about-content strong { color: var(--navy); }
+
     .about-moto {
       aspect-ratio: 21 / 9;
-      border-radius: var(--radius);
       overflow: hidden;
     }
 
@@ -555,19 +520,18 @@
     }
 
     .tag {
-      background: var(--bg-soft);
+      background: var(--bg);
       border: 1px solid var(--border);
       color: var(--text);
       padding: 0.35rem 0.85rem;
-      border-radius: 100px;
       font-size: 0.8rem;
-      font-weight: 600;
+      font-weight: 700;
       transition: all var(--transition);
     }
 
     .tag:hover {
-      border-color: var(--accent);
-      color: var(--accent);
+      border-color: var(--orange);
+      color: var(--orange);
     }
 
     .about-highlight {
@@ -576,20 +540,19 @@
       gap: 0.85rem;
       margin-top: 1.5rem;
       padding: 1.25rem;
-      background: var(--bg-soft);
-      border-radius: var(--radius);
+      background: var(--bg);
       border: 1px solid var(--border);
     }
 
     .about-highlight .hl-icon { font-size: 1.4rem; flex-shrink: 0; }
-    .about-highlight strong { display: block; font-size: 0.92rem; margin-bottom: 0.2rem; }
+    .about-highlight strong { display: block; font-size: 0.92rem; margin-bottom: 0.2rem; color: var(--navy); }
     .about-highlight span { font-size: 0.84rem; color: var(--text-secondary); line-height: 1.55; }
 
     /* ===========================
        Team Section
     =========================== */
     #tym {
-      background: var(--bg-soft);
+      background: var(--bg);
     }
 
     .team-grid {
@@ -602,14 +565,13 @@
     .team-card {
       background: var(--bg);
       border: 1px solid var(--border);
-      border-radius: var(--radius);
       padding: 1.5rem;
       transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
     }
 
     .team-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+      box-shadow: 0 20px 40px rgba(13, 43, 80, 0.07);
       border-color: var(--border-hover);
     }
 
@@ -617,7 +579,6 @@
       width: 44px;
       height: 44px;
       background: var(--bg-soft);
-      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -629,7 +590,7 @@
       font-size: 0.95rem;
       font-weight: 800;
       margin-bottom: 0.4rem;
-      letter-spacing: -0.01em;
+      color: var(--navy);
     }
 
     .team-card p {
@@ -642,7 +603,7 @@
        Services / Pricing
     =========================== */
     #sluzby {
-      background: var(--bg);
+      background: var(--bg-soft);
     }
 
     .services-header { margin-bottom: 3rem; }
@@ -656,7 +617,6 @@
     .service-card {
       background: var(--bg);
       border: 1px solid var(--border);
-      border-radius: var(--radius);
       padding: 1.75rem;
       transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
       position: relative;
@@ -664,7 +624,7 @@
 
     .service-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+      box-shadow: 0 20px 40px rgba(13, 43, 80, 0.07);
       border-color: var(--border-hover);
     }
 
@@ -674,7 +634,7 @@
       font-size: 1.05rem;
       font-weight: 800;
       margin-bottom: 0.5rem;
-      letter-spacing: -0.01em;
+      color: var(--navy);
     }
 
     .service-card p {
@@ -698,7 +658,7 @@
       content: '—';
       position: absolute;
       left: 0;
-      color: var(--accent);
+      color: var(--orange);
       font-weight: 700;
       font-size: 0.7rem;
     }
@@ -714,38 +674,40 @@
 
     .price-amount {
       font-size: 1.25rem;
-      font-weight: 900;
-      color: var(--text);
-      letter-spacing: -0.02em;
+      font-weight: 800;
+      color: var(--navy);
     }
 
     .price-note { font-size: 0.78rem; color: var(--text-muted); }
 
     /* Featured */
     .service-card.featured {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 1px var(--accent);
+      border-color: var(--orange);
+      box-shadow: 0 0 0 1px var(--orange);
     }
 
     .featured-badge {
       position: absolute;
       top: 1rem; right: 1rem;
-      background: var(--accent);
-      color: white;
+      background: var(--orange);
+      color: var(--navy);
       font-size: 0.68rem;
       font-weight: 800;
       letter-spacing: 0.04em;
       text-transform: uppercase;
       padding: 0.25rem 0.7rem;
-      border-radius: 100px;
     }
 
     /* ===========================
-       Contact Section
+       Contact Section (tmavá)
     =========================== */
     #kontakt {
-      background: var(--bg-soft);
+      background: var(--navy);
     }
+
+    #kontakt .section-label { color: var(--orange-light); }
+    #kontakt .section-title { color: #ffffff; }
+    #kontakt .section-desc { color: rgba(255, 255, 255, 0.75); }
 
     .contact-grid {
       display: grid;
@@ -759,6 +721,7 @@
       font-size: 1.15rem;
       font-weight: 800;
       margin-bottom: 1.5rem;
+      color: #ffffff;
     }
 
     .contact-items { display: flex; flex-direction: column; gap: 0.75rem; }
@@ -768,22 +731,20 @@
       align-items: center;
       gap: 1rem;
       padding: 1rem 1.25rem;
-      background: var(--bg);
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
       transition: border-color var(--transition), transform var(--transition);
     }
 
     .contact-item:hover {
-      border-color: var(--border-hover);
+      border-color: rgba(255, 255, 255, 0.35);
       transform: translateX(4px);
     }
 
     .contact-item-icon {
       width: 42px;
       height: 42px;
-      background: var(--bg-soft);
-      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.08);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -794,7 +755,7 @@
     .contact-item-text strong {
       display: block;
       font-size: 0.72rem;
-      color: var(--text-muted);
+      color: rgba(255, 255, 255, 0.55);
       text-transform: uppercase;
       letter-spacing: 0.05em;
       font-weight: 700;
@@ -804,17 +765,17 @@
     .contact-item-text span,
     .contact-item-text a {
       font-size: 0.92rem;
-      font-weight: 600;
-      color: var(--text);
+      font-weight: 700;
+      color: #ffffff;
     }
 
-    .contact-item-text a:hover { color: var(--accent); }
+    .contact-item-text a:hover { color: var(--orange-light); }
 
     .contact-social { margin-top: 2rem; }
 
     .contact-social > p {
       font-size: 0.72rem;
-      color: var(--text-muted);
+      color: rgba(255, 255, 255, 0.55);
       text-transform: uppercase;
       letter-spacing: 0.05em;
       font-weight: 700;
@@ -827,27 +788,24 @@
       display: flex;
       align-items: center;
       gap: 0.6rem;
-      background: var(--bg);
-      border: 1px solid var(--border);
-      color: var(--text-secondary) !important;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: rgba(255, 255, 255, 0.85) !important;
       padding: 0.6rem 1rem;
-      border-radius: 10px;
       font-size: 0.84rem;
-      font-weight: 600;
+      font-weight: 700;
       transition: all var(--transition);
     }
 
     .social-link:hover {
-      border-color: var(--accent);
-      color: var(--accent) !important;
+      border-color: var(--orange-light);
+      color: var(--orange-light) !important;
       transform: translateX(4px);
     }
 
     /* Contact Form */
     .contact-form-wrap {
       background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
       padding: 2.25rem;
     }
 
@@ -855,6 +813,7 @@
       font-size: 1.15rem;
       font-weight: 800;
       margin-bottom: 0.4rem;
+      color: var(--navy);
     }
 
     .contact-form-wrap > p {
@@ -880,9 +839,8 @@
     .form-group select {
       background: var(--bg-soft);
       border: 1px solid var(--border);
-      border-radius: 10px;
       color: var(--text);
-      font-family: 'Inter', sans-serif;
+      font-family: 'Nunito', sans-serif;
       font-size: 0.92rem;
       padding: 0.8rem 1rem;
       outline: none;
@@ -893,8 +851,8 @@
     .form-group input:focus,
     .form-group textarea:focus,
     .form-group select:focus {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(74, 58, 255, 0.08);
+      border-color: var(--orange);
+      box-shadow: 0 0 0 3px rgba(227, 155, 44, 0.15);
     }
 
     .form-group textarea { resize: vertical; min-height: 110px; }
@@ -914,7 +872,7 @@
       height: 16px;
       margin-top: 2px;
       flex-shrink: 0;
-      accent-color: var(--accent);
+      accent-color: var(--navy);
       cursor: pointer;
     }
 
@@ -923,9 +881,8 @@
     .form-msg {
       margin-top: 1rem;
       padding: 0.8rem 1rem;
-      border-radius: 10px;
       font-size: 0.88rem;
-      font-weight: 600;
+      font-weight: 700;
       display: none;
     }
 
@@ -944,11 +901,10 @@
     }
 
     /* ===========================
-       Footer
+       Footer (tmavý)
     =========================== */
     footer {
-      background: var(--bg);
-      border-top: 1px solid var(--border);
+      background: var(--navy-deep);
       padding: 3rem 2rem;
       text-align: center;
     }
@@ -963,13 +919,13 @@
     }
 
     .footer-logo {
-      font-weight: 900;
+      font-weight: 800;
       font-size: 1.05rem;
-      letter-spacing: -0.02em;
+      color: #ffffff;
     }
 
     footer p {
-      color: var(--text-muted);
+      color: rgba(255, 255, 255, 0.5);
       font-size: 0.8rem;
     }
 
@@ -982,13 +938,13 @@
     }
 
     .footer-links a {
-      color: var(--text-secondary);
+      color: rgba(255, 255, 255, 0.7);
       font-size: 0.8rem;
-      font-weight: 600;
+      font-weight: 700;
       transition: color var(--transition);
     }
 
-    .footer-links a:hover { color: var(--accent); }
+    .footer-links a:hover { color: var(--orange-light); }
 
     /* ===========================
        Animations
@@ -1021,14 +977,19 @@
     =========================== */
     @media (max-width: 900px) {
       nav { padding: 0 1.5rem; }
-      .hero-name { font-size: clamp(3rem, 14vw, 6rem); }
+
+      #hero { padding: 120px 1.5rem 55px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .hero-photo { max-width: 420px; }
+
+      .values-band-inner { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+
+      .steps-grid { grid-template-columns: 1fr; gap: 2rem; }
 
       .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
       .about-right { position: static; }
 
       .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .intro-strip-inner { grid-template-columns: 1fr; }
-      .intro-photo { aspect-ratio: 16 / 9; }
       .team-grid { grid-template-columns: 1fr 1fr; }
     }
 
@@ -1050,11 +1011,10 @@
       section { padding: 60px 1.25rem; }
       .services-grid { grid-template-columns: 1fr; }
       .team-grid { grid-template-columns: 1fr; }
-      .intro-strip-inner { border-radius: 16px; }
     }
 
     @media (max-width: 480px) {
-      .hero-name { font-size: clamp(2.5rem, 16vw, 4rem); }
+      .values-band-inner { grid-template-columns: 1fr; gap: 1.25rem; }
     }
   </style>
 </head>
@@ -1066,11 +1026,12 @@
   <nav>
     <div class="nav-logo">Marek Musil</div>
     <ul class="nav-links" id="navLinks">
+      <li><a href="#spoluprace">Spolupráce</a></li>
       <li><a href="#o-mne">O mně</a></li>
       <li><a href="#tym">Tým</a></li>
       <li><a href="#sluzby">Ceník</a></li>
       <li><a href="#kontakt">Kontakt</a></li>
-      <li><a href="#kontakt" class="nav-cta">Domluvit konzultaci</a></li>
+      <li><a href="#kontakt" class="nav-cta">Nezávazná konzultace</a></li>
     </ul>
     <button class="nav-toggle" id="navToggle" aria-label="Otevřít menu">
       <span></span><span></span><span></span>
@@ -1081,67 +1042,97 @@
        Hero
   ===================== -->
   <section id="hero">
-    <p class="hero-subtitle-top">Finanční poradce · Brno · osobně nebo online</p>
-    <h1 class="hero-name">MAREK<br>MUSIL</h1>
-    <div class="hero-typing-wrap">
-      <span id="typingText"></span><span class="typing-cursor"></span>
-    </div>
-    <div class="hero-actions">
-      <a href="#kontakt" class="btn-primary">Domluvit konzultaci</a>
-      <a href="#sluzby" class="btn-outline">Přehled ceníku</a>
-    </div>
-    <div class="hero-scroll-hint">
-      <div class="scroll-arrow"></div>
-    </div>
-  </section>
-
-  <!-- =====================
-       Photo + Values
-  ===================== -->
-  <div class="intro-strip fade-in">
-    <div class="intro-strip-inner">
-      <div class="intro-photo">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <p class="hero-label">Finanční poradce · Brno · osobně i online</p>
+        <h1 class="hero-name">Marek<br>Musil</h1>
+        <div class="hero-typing-wrap">
+          <span id="typingText"></span><span class="typing-cursor"></span>
+        </div>
+        <div class="hero-actions">
+          <a href="#kontakt" class="btn-primary">Nezávazná konzultace</a>
+          <a href="#spoluprace" class="btn-link">Jak spolupráce probíhá →</a>
+        </div>
+      </div>
+      <div class="hero-photo">
         <img
           src="portret.jpg"
           alt="Marek Musil – finanční poradce"
           loading="eager"
         />
       </div>
-      <div class="intro-values">
-        <h3 class="intro-values-title">Proč spolupracovat<br>se mnou?</h3>
-        <div class="value-item">
-          <div class="value-item-icon">✔</div>
-          <div class="value-item-text">
-            <h4>Jasná odměna</h4>
-            <p>Víte předem, co platíte</p>
-          </div>
-        </div>
-        <div class="value-item">
-          <div class="value-item-icon">✔</div>
-          <div class="value-item-text">
-            <h4>Bez tlaku na produkty</h4>
-            <p>Doporučím to, co vám sedí</p>
-          </div>
-        </div>
-        <div class="value-item">
-          <div class="value-item-icon">✔</div>
-          <div class="value-item-text">
-            <h4>Široký přesah</h4>
-            <p>Finance, právo, reality a další</p>
-          </div>
-        </div>
-        <div class="value-item">
-          <div class="value-item-icon">✔</div>
-          <div class="value-item-text">
-            <h4>Osobně i online</h4>
-            <p>Brno + celá ČR</p>
-          </div>
-        </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       Values Band
+  ===================== -->
+  <div class="values-band">
+    <div class="values-band-inner">
+      <div class="value-item">
+        <h4>Jasná odměna</h4>
+        <p>Víte předem, co platíte</p>
+      </div>
+      <div class="value-item">
+        <h4>Bez tlaku na produkty</h4>
+        <p>Doporučím to, co vám sedí</p>
+      </div>
+      <div class="value-item">
+        <h4>Široký přesah</h4>
+        <p>Finance, právo, reality a další</p>
+      </div>
+      <div class="value-item">
+        <h4>Osobně i online</h4>
+        <p>Brno + celá ČR</p>
       </div>
     </div>
   </div>
 
-  <div class="separator"></div>
+  <!-- =====================
+       Jak spolupráce probíhá
+  ===================== -->
+  <section id="spoluprace">
+    <div class="container">
+
+      <div class="fade-in">
+        <div class="section-label">01 — Spolupráce</div>
+        <h2 class="section-title">Jak spolupráce probíhá</h2>
+        <p class="section-desc">
+          Žádný složitý proces. Tři kroky – a v každém z nich víte,
+          co se děje a co platíte.
+        </p>
+      </div>
+
+      <div class="steps-grid fade-in-stagger">
+        <div class="step fade-in">
+          <div class="step-num">01</div>
+          <h3>Nezávazné seznámení</h3>
+          <p>
+            Zavoláte mi nebo napíšete. Probereme, co řešíte, a já vám
+            na rovinu řeknu, jestli a jak vám dokážu pomoct. První schůzka
+            je zdarma a k ničemu vás nezavazuje.
+          </p>
+        </div>
+        <div class="step fade-in">
+          <div class="step-num">02</div>
+          <h3>Návrh řešení</h3>
+          <p>
+            Zmapuji vaši situaci a připravím konkrétní postup. Na odměně
+            se domluvíme předem – víte, co platíte a co za to dostanete.
+          </p>
+        </div>
+        <div class="step fade-in">
+          <div class="step-num">03</div>
+          <h3>Realizace a dlouhodobá péče</h3>
+          <p>
+            Pomůžu vám vše vyřídit a uvést do praxe. A zůstávám vám
+            k dispozici i dál – spolupráce s klienty u mě obvykle trvá roky.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
 
   <!-- =====================
        O mně
@@ -1151,7 +1142,7 @@
       <div class="about-grid">
 
         <div class="about-content fade-in">
-          <div class="section-label">O mně</div>
+          <div class="section-label">02 — O mně</div>
           <h2 class="section-title">Jsem Marek Musil</h2>
           <p>
             Finančnímu poradenství se věnuji přes deset let. Věřím, že kvalitní
@@ -1262,8 +1253,6 @@
     </div>
   </section>
 
-  <div class="separator"></div>
-
   <!-- =====================
        Tým odborníků
   ===================== -->
@@ -1271,7 +1260,7 @@
     <div class="container">
 
       <div class="fade-in">
-        <div class="section-label">Tým odborníků</div>
+        <div class="section-label">03 — Tým odborníků</div>
         <h2 class="section-title">Komplexní pokrytí<br>díky specialistům</h2>
         <p class="section-desc">
           Na specifická témata mám za sebou tým prověřených odborníků.
@@ -1321,8 +1310,6 @@
     </div>
   </section>
 
-  <div class="separator"></div>
-
   <!-- =====================
        Ceník
   ===================== -->
@@ -1330,7 +1317,7 @@
     <div class="container">
 
       <div class="services-header fade-in">
-        <div class="section-label">Ceník služeb</div>
+        <div class="section-label">04 — Ceník služeb</div>
         <h2 class="section-title">Jasná odměna,<br>žádné skryté poplatky</h2>
         <p class="section-desc">
           Ceny jsou orientační – konkrétní rozsah a odměnu vždy domluvíme
@@ -1448,9 +1435,9 @@
     <div class="container">
 
       <div class="fade-in">
-        <div class="section-label">Kontakt</div>
-        <h2 class="section-title">Pojďme si promluvit</h2>
-        <p class="section-desc">Napište mi nebo zavolejte – ozvu se do 24 hodin. Schůzky domlouvám osobně i online.</p>
+        <div class="section-label">05 — Pojďme se poznat</div>
+        <h2 class="section-title">Nezávazná schůzka.<br>Bez tlaku, bez závazku.</h2>
+        <p class="section-desc">Napište mi nebo zavolejte – ozvu se do 24 hodin. Osobně v Brně, online po celé ČR.</p>
       </div>
 
       <div class="contact-grid">
@@ -1497,7 +1484,7 @@
               <a href="https://www.facebook.com/marek.musil.3/?locale=cs_CZ" target="_blank" rel="noopener" class="social-link">
                 📘 Facebook – Marek Musil
               </a>
-              <a href="https://www.financero.cz/profil-poradce/marek-musil" target="_blank" rel="noopener" class="social-link">
+              <a href="https://financero.cz/tym/marek-musil" target="_blank" rel="noopener" class="social-link">
                 🌐 Profil na Financero.cz
               </a>
             </div>
@@ -1596,11 +1583,11 @@
 
     // --- Typing effect ---
     const phrases = [
+      'Pomůžu vám udělat si v penězích jasno.',
       'Platíte za radu, ne za uzavřené smlouvy.',
-      'Osobní schůzky v Brně, online po celé ČR.',
-      'Přes 10 let zkušeností v oboru.',
-      'Finanční plánování s nadhledem.',
-      'Poradce, podnikatel a nadšenec do technologií.',
+      'Bez tlaku. S přehledem. Na roky.',
+      'Hypotéky, investice, pojištění i reality na jednom místě.',
+      'Osobně v Brně, online po celé ČR.',
     ];
     const typingEl = document.getElementById('typingText');
     let phraseIdx = 0;
@@ -1657,7 +1644,7 @@
     window.addEventListener('scroll', () => {
       if (window.scrollY > 80) {
         navEl.style.background = 'rgba(255, 255, 255, 0.97)';
-        navEl.style.boxShadow = '0 1px 12px rgba(0,0,0,0.04)';
+        navEl.style.boxShadow = '0 1px 12px rgba(13,43,80,0.06)';
       } else {
         navEl.style.background = 'rgba(255, 255, 255, 0.92)';
         navEl.style.boxShadow = 'none';

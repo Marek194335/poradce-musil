@@ -14,7 +14,7 @@ Cílem webu je budování osobního brandu a důvěryhodnosti – ne firemní pr
 - **Telefon:** +420 732 187 153
 - **LinkedIn:** linkedin.com/in/marekmusil
 - **Facebook:** facebook.com/marek.musil.3
-- **Profil Financero:** financero.cz/profil-poradce/marek-musil
+- **Profil Financero:** financero.cz/tym/marek-musil
 - **Doména webu:** poradce-musil.cz
 - **Osobní schůzky:** Brno
 - **Online konzultace:** celá ČR
@@ -56,12 +56,13 @@ Cílem webu je budování osobního brandu a důvěryhodnosti – ne firemní pr
 ## Obsah webu
 
 ### Sekce
-1. **Hero** – obrovský nadpis „MAREK MUSIL" s typing efektem (střídání frází), minimalistický design, CTA tlačítka, šipka dolů
-2. **Foto + Values strip** – layout: fotka portret.jpg vlevo (portrét 3:4), vpravo 4 hodnoty s nadpisem „Proč spolupracovat se mnou?" v kartu se zaoblenými rohy
-3. **O mně** – layout: levý sloupec (bio vč. odstavce o podnikání/AI a věty o koníčcích, pod ní decentní široká fotka motorka.jpg v poměru 21:9, tagy, 3 boxy – Financero + Dentárko + AFP ČR, boxy Financero a Dentárko s odkazy na weby), pravý sloupec (fotka balon.jpg + certifikace). Pravý sloupec je sticky.
-4. **Tým odborníků** – 6 karet (grid 3×2): finanční a krizové poradenství, hypotéky a úvěry, investice, pojištění, právní služby, realitní služby
-5. **Ceník služeb** – 6 služeb s cenami
-6. **Kontakt** – telefon, email, osobní schůzky (Brno), online (celá ČR), 3 sociální sítě, formulář (Formspree)
+1. **Hero** – rozdělený na dva sloupce: vlevo oranžový štítek, jméno „Marek Musil" (Nunito Light), typing efekt s klientskými přínosy a CTA („Nezávazná konzultace" + podtržený odkaz „Jak spolupráce probíhá →"), vpravo fotka portret.jpg (4:5, ostré rohy). Hero není přes celou výšku okna – tvář je vidět bez scrollování.
+2. **Values band** – úzký pás hned pod hero: 4 hodnoty vedle sebe (Jasná odměna, Bez tlaku na produkty, Široký přesah, Osobně i online)
+3. **Jak spolupráce probíhá** (#spoluprace, štítek „01 — Spolupráce") – 3 očíslované kroky: Nezávazné seznámení → Návrh řešení → Realizace a dlouhodobá péče. Odbourává strach z neznáma u běžných klientů.
+4. **O mně** (štítek „02 — O mně") – layout: levý sloupec (bio vč. odstavce o podnikání/AI a věty o koníčcích, pod ní decentní široká fotka motorka.jpg v poměru 21:9, tagy, 3 boxy – Financero + Dentárko + AFP ČR, boxy Financero a Dentárko s odkazy na weby), pravý sloupec (fotka balon.jpg + certifikace). Pravý sloupec je sticky.
+5. **Tým odborníků** (štítek „03 — Tým odborníků") – 6 karet (grid 3×2): finanční a krizové poradenství, hypotéky a úvěry, investice, pojištění, právní služby, realitní služby
+6. **Ceník služeb** (štítek „04 — Ceník služeb") – 6 služeb s cenami
+7. **Kontakt** (štítek „05 — Pojďme se poznat") – tmavě modrá sekce po vzoru financero.cz, nadpis „Nezávazná schůzka. Bez tlaku, bez závazku."; telefon, email, osobní schůzky (Brno), online (celá ČR), 3 sociální sítě, bílá karta s formulářem (Formspree)
 
 ### Ceník služeb
 | Služba | Cena |
@@ -94,6 +95,8 @@ Cílem webu je budování osobního brandu a důvěryhodnosti – ne firemní pr
 - Český jazyk, bez cizího žargonu a anglicismů
 - Důraz na důvěru a odbornost
 - Srozumitelnost pro běžného člověka
+- Texty psané směrem ke klientovi – co z toho má on, ne výčet vlastností poradce
+- Krátké úderné věty po vzoru financero.cz („Bez tlaku. S přehledem. Na roky.")
 
 ---
 
@@ -111,39 +114,44 @@ Cílem webu je budování osobního brandu a důvěryhodnosti – ne firemní pr
 ## Design
 
 ### Vizuální styl
-- Inspirace webem **faborsky.cz** – čistý minimalistický světlý design, hodně bílého prostoru
-- Obrovská typografie jména v hero jako dominantní vizuální prvek
-- Fotografie autora jako klíčový prvek (3 fotky: portret.jpg = foto+values strip + OG obrázek, balon.jpg = sekce O mně vpravo, motorka.jpg = decentní široká fotka u koníčků v sekci O mně)
-- **Jednoduché oddělovače** – tenká linka (separator) mezi sekcemi
-- **Bez dekorativních prvků** – čistý, vzdušný layout
+- **Jednotná identita s financero.cz** – stejná paleta (tmavě modrá + oranžový akcent), písmo Nunito, lehké (300) velké nadpisy, ostré rohy (žádné zaoblení), číslované štítky sekcí ve formátu „01 — Spolupráce"
+- Čistý minimalistický světlý design, hodně bílého prostoru
+- **Tvář nad ohybem stránky** – portrét přímo v hero, viditelný bez scrollování (lidskost na první pohled)
+- Fotografie autora jako klíčový prvek (3 fotky: portret.jpg = hero + OG obrázek, balon.jpg = sekce O mně vpravo, motorka.jpg = decentní široká fotka u koníčků v sekci O mně)
+- Střídání pozadí sekcí (bílá / jemně šedá / teplá bílá) místo oddělovačů; kontakt a patička tmavě modré
 - **Kompaktní layout** – přehledný ale ne roztáhlý
 
 ### Typografie
-- **Font: Inter** (Google Fonts)
-- Nadpisy: Inter Black (900)
-- Tělo textu: Inter Regular (400) / Medium (500) / SemiBold (600) / Bold (700)
+- **Font: Nunito** (Google Fonts) – stejný jako financero.cz
+- Velké nadpisy (jméno, section-title): Nunito Light (300) s mírně záporným prostrkáním
+- Tělo textu: Nunito Regular (400) / SemiBold (600)
+- Štítky, tlačítka, tučné prvky: Bold (700) / ExtraBold (800)
 
-### Barevná paleta
+### Barevná paleta (převzatá z financero.cz)
 ```
 --bg:             #ffffff   /* bílé pozadí (primární) */
---bg-soft:        #f7f7f5   /* jemně šedé pozadí (sekce, karty) */
---bg-dark:        #0f0f0f   /* tmavá pro tlačítka, text */
---accent:         #4a3aff   /* fialová – accent, featured prvky */
---accent-hover:   #3525e6   /* tmavší fialová pro hover */
---text:           #1a1a1a   /* primární text */
---text-secondary: #6b6b6b   /* sekundární text */
---text-muted:     #999999   /* tlumený text – popisky */
---border:         #e8e8e8   /* jemné bordery */
+--bg-soft:        #f9fafb   /* jemně šedé pozadí (values band, ceník) */
+--bg-warm:        #fafaf7   /* teplá bílá (sekce O mně) */
+--navy:           #0d2b50   /* tmavě modrá – nadpisy, tlačítka, sekce Kontakt */
+--navy-mid:       #143e70   /* světlejší modrá – hover tlačítek */
+--navy-light:     #1b5191   /* modrá – odkazy */
+--navy-deep:      #061629   /* nejtmavší modrá – patička */
+--orange:         #e39b2c   /* oranžová – štítky sekcí, akcenty, typing kurzor */
+--orange-light:   #eaa840   /* světlejší oranžová – hovery na tmavém pozadí */
+--text:           #1f2937   /* primární text */
+--text-secondary: #4b5563   /* sekundární text */
+--text-muted:     #6b7280   /* tlumený text – popisky */
+--border:         #e5e7eb   /* jemné bordery */
 ```
 
 ### Layout principy
 - Mobile-first, responzivní
-- Světlé pozadí, tmavý text, fialový accent
-- Zaoblené rohy karet (border-radius: 16px)
-- Pill-shaped tlačítka (border-radius: 100px)
+- Světlé pozadí, tmavě modré nadpisy, oranžový akcent
+- Ostré rohy (žádný border-radius) – karty, tlačítka, fotky i formulář
+- Hranatá tmavě modrá tlačítka; sekundární CTA jako odkaz podtržený oranžovou
 - Jemné stíny, hover animace, staggered fade-in
 - Sticky pravý sloupec v sekci O mně (fotka + certifikace)
-- Foto+values strip: fotka vlevo (3:4), hodnoty vpravo
+- Hero: text vlevo, portrét vpravo (4:5); values band pod hero (4 sloupce)
 
 ---
 
@@ -200,5 +208,5 @@ Cílem webu je budování osobního brandu a důvěryhodnosti – ne firemní pr
 8. Osobní schůzky pouze Brno, online konzultace celá ČR
 9. Model placeného poradenství je „upřednostňovaný", ne „výhradní"
 10. Dbej na kompaktnost – stránka nemá být zbytečně roztáhlá
-11. Zachovej stávající vizuální styl (světlý minimalistický + fialový accent), neměnit barevnou paletu
+11. Zachovej jednotnou identitu s financero.cz (Nunito, tmavě modrá + oranžová, ostré rohy, číslované štítky sekcí) – paletu neměnit bez výslovného zadání
 12. Při úpravách vždy aktualizovat i tento MD soubor
