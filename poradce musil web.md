@@ -9,7 +9,8 @@ Cílem webu je budování osobního brandu a důvěryhodnosti – ne firemní pr
 
 - **Jméno:** Marek Musil
 - **Profese:** Finanční poradce
-- **Firma:** Financero, s.r.o. (IČO: 08982171)
+- **IČO (OSVČ):** 72537647 – uvedené v patičce webu
+- **Firma:** Financero, s.r.o. (IČO: 08982171) – IČO firmy na webu neuvádět, patří s.r.o., ne Markovi
 - **Email:** marek.musil@financero.cz
 - **Telefon:** +420 732 187 153
 - **LinkedIn:** linkedin.com/in/marekmusil
